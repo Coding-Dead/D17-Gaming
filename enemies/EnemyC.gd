@@ -1,22 +1,22 @@
-class_name EnemySQL
+class_name EnemyC
 extends "EnemyInterface.gd"
 
 func _init():
-	curr_health = 100.0
-	speed = 100.0
-	attack_cooldown = 50.0
-	damage = 10.0
+	curr_health = 120.0
+	speed = 75.0
+	attack_cooldown = 150.0
+	damage = 20.0
 	is_ranged = true
 
 
 func attack_player():
 	if curr_attack_cooldown == 0:
-		var spread_angle = 5
+		var spread_angle = 30
 		
-		for i in range(2):
+		for i in range(12):
 			var bullet = Bullet.instantiate() 
 			bullet.damage = damage
-			bullet.speed = 300.0 
+			bullet.speed = 400.0 
 			bullet.switch_target()
 			add_child(bullet)
 

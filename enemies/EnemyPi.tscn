@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq3fk7jsf44uf"]
+
+[ext_resource type="Script" path="res://enemies/EnemyPi.gd" id="1_7wlis"]
+[ext_resource type="Texture2D" uid="uid://dnhulfrhy3vo2" path="res://assets/enemies/pi.png" id="2_pg7pm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0e1yf"]
+radius = 271.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2nrpq"]
+radius = 23.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_44kv4"]
+radius = 13.0
+
+[node name="EnemyPi" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_7wlis")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.98023e-08, -0.5)
+scale = Vector2(1.625, 1.5625)
+texture = ExtResource("2_pg7pm")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_0e1yf")
+
+[node name="AttackDetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDetectionArea"]
+shape = SubResource("CircleShape2D_2nrpq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_44kv4")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_entered" from="AttackDetectionArea" to="." method="_on_attack_detection_area_body_entered"]
+[connection signal="body_exited" from="AttackDetectionArea" to="." method="_on_attack_detection_area_body_exited"]
