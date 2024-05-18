@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://bw7e3fh63p5gt" path="res://enemies/EnemySQL.tscn" id="1_uyavr"]
 [ext_resource type="PackedScene" uid="uid://dn0qkha86nick" path="res://enemies/EnemyJavaScript.tscn" id="2_6lcu4"]
 [ext_resource type="PackedScene" uid="uid://c8n72wvwebu7p" path="res://bullet.tscn" id="2_kdxsj"]
-[ext_resource type="PackedScene" uid="uid://c53m8nebog1oi" path="res://enemies/EnemyIntegral.tscn" id="5_8f076"]
-[ext_resource type="PackedScene" uid="uid://dmskw7xt8a4k5" path="res://enemies/EnemySigma.tscn" id="6_qca8h"]
-[ext_resource type="PackedScene" uid="uid://bq3fk7jsf44uf" path="res://enemies/EnemyPi.tscn" id="7_qcrvm"]
-[ext_resource type="PackedScene" uid="uid://dl4stx6r56lr5" path="res://enemies/EnemyC.tscn" id="8_3pgpn"]
+[ext_resource type="PackedScene" uid="uid://frk8hlrhd3k5" path="res://enemies/EnemyIntegral.tscn" id="5_8f076"]
+[ext_resource type="PackedScene" path="res://enemies/EnemySigma.tscn" id="6_qca8h"]
+[ext_resource type="PackedScene" uid="uid://dsspm7q045y42" path="res://enemies/EnemyPi.tscn" id="7_qcrvm"]
+[ext_resource type="PackedScene" uid="uid://cil7ioiqdbqrh" path="res://enemies/EnemyC.tscn" id="8_3pgpn"]
 
 [node name="Sandbox" type="Node2D"]
 
