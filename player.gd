@@ -50,7 +50,7 @@ func get_input():
 		start_dash()
 
 func _physics_process(delta):
-	debug_label.text = "Health: %d\nScore: %d" % [curr_health, 0]
+	debug_label.text = "Health: %d\nPosition: %d" % [curr_health, 0]
 	get_input()
 	if is_dashing:
 		update_dash(delta)

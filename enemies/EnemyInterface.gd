@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var Bullet : PackedScene
 @export var player : Node2D
 
 var speed : float = 0.0
@@ -13,8 +14,6 @@ var is_ranged : bool = false
 var touching_monster : bool = false
 var random_direction : Vector2 = Vector2.ZERO
 var touching_mobs = []
-
-
 
 
 func attack_player(): # This has to be overriden in order to work for ranged enemies

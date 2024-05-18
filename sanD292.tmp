@@ -7,14 +7,12 @@
 
 [node name="Sandbox" type="Node2D"]
 
-[node name="EnemySQL" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_uyavr")]
-position = Vector2(166, 284)
-player = NodePath("../Player")
+[node name="EnemySQL" parent="." instance=ExtResource("1_uyavr")]
+Bullet = ExtResource("2_kdxsj")
 
 [node name="Player" parent="." instance=ExtResource("1_u668d")]
 position = Vector2(465, 211)
 
 [node name="EnemyJavaScript" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_6lcu4")]
 position = Vector2(754, 201)
-Bullet = ExtResource("2_kdxsj")
-player = NodePath("../Player")
+player = NodePath(".")

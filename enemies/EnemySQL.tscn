@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bw7e3fh63p5gt"]
+
+[ext_resource type="Script" path="res://enemies/EnemySQL.gd" id="1_pud28"]
+[ext_resource type="Texture2D" uid="uid://be3qi6kp61pw4" path="res://assets/enemies/sql.png" id="2_aqwv0"]
+[ext_resource type="PackedScene" uid="uid://c8n72wvwebu7p" path="res://bullet.tscn" id="2_sqr0c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0e1yf"]
+radius = 210.535
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2nrpq"]
+radius = 170.106
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_44kv4"]
+radius = 13.0
+
+[node name="EnemySQL" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_pud28")
+Bullet = ExtResource("2_sqr0c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.98023e-08, -0.5)
+scale = Vector2(1.625, 1.5625)
+texture = ExtResource("2_aqwv0")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_0e1yf")
+
+[node name="AttackDetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDetectionArea"]
+shape = SubResource("CircleShape2D_2nrpq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_44kv4")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_entered" from="AttackDetectionArea" to="." method="_on_attack_detection_area_body_entered"]
+[connection signal="body_exited" from="AttackDetectionArea" to="." method="_on_attack_detection_area_body_exited"]
