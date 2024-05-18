@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var dash_duration = 0.2
 @export var dash_cooldown = 0.5
 @export var Bullet : PackedScene 
+@export var health : int = 1000
+@export var score : int = 0
 
 @onready var debug_label = $DebugLabel
 
@@ -58,7 +60,14 @@ func _physics_process(delta):
 		dash_cooldown_left -= delta
 	move_and_slide()
 
-func take_damage(damage: float):
-	curr_health -= damage
+func take_damage(_damage: float):
+	curr_health -= _damage
 	if curr_health < 0:
 		print("nie zyje")
+
+func _on_area_2d_area_entered(area: Area2D):
+	if is_instance_of(area, Item):
+		area.pick_up(self)
+		print("score:", self.score, " hp:", self.health)
+	
+		

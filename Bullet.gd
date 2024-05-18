@@ -20,7 +20,6 @@ func _physics_process(delta):
 func set_target(target_direction):
 	target_dir = target_direction
 
-
 func switch_target():
 	targeted_group = "player"
 	friendly_group = "enemy"
