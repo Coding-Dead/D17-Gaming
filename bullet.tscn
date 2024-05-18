@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://blp26eixjuv32"]
+[gd_scene load_steps=4 format=3 uid="uid://c8n72wvwebu7p"]
 
 [ext_resource type="Script" path="res://bullet.gd" id="1_vputh"]
 [ext_resource type="Texture2D" uid="uid://cmhdcdnuo4eas" path="res://laserRed01.png" id="2_afq41"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_na2pm"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_wk3nb"]
 
 [node name="Bullet" type="Area2D"]
 script = ExtResource("1_vputh")
@@ -13,6 +13,7 @@ rotation = 1.5708
 texture = ExtResource("2_afq41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_na2pm")
+position = Vector2(16, 0)
+shape = SubResource("CircleShape2D_wk3nb")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
