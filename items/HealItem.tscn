@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://33p3tueliqtk"]
 
 [ext_resource type="Script" path="res://items/HealItem.gd" id="1_2x8oc"]
-[ext_resource type="Texture2D" uid="uid://gn2p0mebib2l" path="res://assets/enemies/github.png" id="1_alxig"]
+[ext_resource type="Texture2D" uid="uid://brdeom6l7srl4" path="res://assets/items/potion.png" id="2_nwd6a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_habff"]
 radius = 15.8
@@ -10,7 +10,7 @@ radius = 15.8
 script = ExtResource("1_2x8oc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_alxig")
+texture = ExtResource("2_nwd6a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_habff")
