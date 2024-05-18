@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://beswcwi376toj"]
+[gd_scene load_steps=3 format=3 uid="uid://beswcwi376toj"]
+
+[ext_resource type="PackedScene" uid="uid://blp26eixjuv32" path="res://bullet.tscn" id="1_8h2g5"]
+[ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_ocauw"]
 
 [node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ocauw")]
+
+[node name="Bullet" parent="." instance=ExtResource("1_8h2g5")]

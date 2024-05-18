@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://crqrei8gtj8kq"]
+
+[ext_resource type="Script" path="res://Character.gd" id="1_j4ky3"]
+[ext_resource type="PackedScene" uid="uid://blp26eixjuv32" path="res://bullet.tscn" id="2_y1gaq"]
+[ext_resource type="Texture2D" uid="uid://dtcbx3tq7xss7" path="res://icon.svg" id="3_yru0b"]
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_j4ky3")
+Bullet = ExtResource("2_y1gaq")
+
+[node name="Muzzle" type="Marker2D" parent="CharacterBody2D"]
+position = Vector2(0, -56)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("3_yru0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
