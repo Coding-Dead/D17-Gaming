@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlullapqiiq4g"
-path="res://.godot/imported/dd.png-10a5112d5a3abbce1c52f50c388bc3cf.ctex"
+uid="uid://cf1pkit2yr0wv"
+path="res://.godot/imported/Zygmunt.png-598dce54ad7a96e3a49ca2d2a7351b45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dd.png"
-dest_files=["res://.godot/imported/dd.png-10a5112d5a3abbce1c52f50c388bc3cf.ctex"]
+source_file="res://assets/characters/Zygmunt.png"
+dest_files=["res://.godot/imported/Zygmunt.png-598dce54ad7a96e3a49ca2d2a7351b45.ctex"]
 
 [params]
 

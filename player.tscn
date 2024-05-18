@@ -1,23 +1,27 @@
 [gd_scene load_steps=5 format=3 uid="uid://crqrei8gtj8kq"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_i8xsc"]
-[ext_resource type="PackedScene" uid="uid://blp26eixjuv32" path="res://bullet.tscn" id="2_y1gaq"]
-[ext_resource type="Texture2D" uid="uid://cfxndp8ef1d7l" path="res://floors/Garek.png" id="3_62edx"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q2am8"]
+[ext_resource type="PackedScene" uid="uid://c8n72wvwebu7p" path="res://bullet.tscn" id="2_y1gaq"]
+[ext_resource type="Texture2D" uid="uid://7wshudj4nvpc" path="res://assets/characters/Wacek.png" id="3_802q0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4tt4"]
+radius = 6.0
+height = 18.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_i8xsc")
 Bullet = ExtResource("2_y1gaq")
 
 [node name="Muzzle" type="Marker2D" parent="."]
-position = Vector2(0, -56)
+position = Vector2(3, -4)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_62edx")
+texture = ExtResource("3_802q0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_q2am8")
+shape = SubResource("CapsuleShape2D_l4tt4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+[node name="DebugLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
