@@ -8,5 +8,6 @@
 [node name="Player" parent="." instance=ExtResource("1_u668d")]
 position = Vector2(79, 121)
 
-[node name="EnemyJavaScript" parent="." instance=ExtResource("2_6lcu4")]
-position = Vector2(448, 228)
+[node name="EnemyJavaScript" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_6lcu4")]
+position = Vector2(754, 201)
+player = NodePath(".")

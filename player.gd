@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var dash_cooldown = 0.5 # Cooldown time in seconds
 @export var Bullet : PackedScene 
 
+var curr_health: float = 100.0
 var is_dashing = false
 var dash_time_left = 0
 var dash_cooldown_left = 0
@@ -48,3 +49,7 @@ func _physics_process(delta):
 		dash_cooldown_left -= delta
 	move_and_slide()
 
+func take_damage(damage: float):
+	curr_health -= damage
+	if curr_health < 0:
+		print("nie zyje")

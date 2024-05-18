@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://juppxpm566s6"]
+[gd_scene load_steps=3 format=3 uid="uid://bjse7bqiloksk"]
 
 [ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_ydl5j"]
 [ext_resource type="PackedScene" uid="uid://dn0qkha86nick" path="res://enemies/EnemyJavaScript.tscn" id="2_yo16y"]
 
-[node name="Sandbox" type="Node2D"]
+[node name="main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ydl5j")]
 
