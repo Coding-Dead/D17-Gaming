@@ -5,8 +5,8 @@ extends CharacterBody2D
 
 func shoot():
 	var b = Bullet.instantiate()
-	add_child(b)
-	b.transform = $Muzzle.transform
+	owner.add_child(b)
+	b.transform = $Muzzle.global_transform
 	
 func get_input():
 	look_at(get_global_mouse_position())
@@ -18,5 +18,3 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
-
-
