@@ -3,8 +3,6 @@ extends CharacterBody2D
 
 @export var player : Node2D
 
-@onready var health_bar = $HealthBar
-
 var speed : float = 0.0
 
 var in_attack_range : bool = false
@@ -66,8 +64,8 @@ func _on_attack_detection_area_body_exited(body):
 
 
 func take_damage(damage : float):
+	print(curr_health)
 	curr_health -= damage
-	health_bar.value = curr_health
 	if curr_health <= 0:
 		queue_free()
 
