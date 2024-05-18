@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var dash_cooldown = 0.5 # Cooldown time in seconds
 @export var Bullet : PackedScene 
 
+@onready var debug_label = $DebugLabel
+
 var curr_health: float = 100.0
 var is_dashing = false
 var dash_time_left = 0
@@ -42,6 +44,7 @@ func get_input():
 		start_dash()
 
 func _physics_process(delta):
+	debug_label.text = "Health: %d\nScore: %d" % [curr_health, 0]
 	get_input()
 	if is_dashing:
 		update_dash(delta)

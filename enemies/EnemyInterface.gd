@@ -46,3 +46,18 @@ func take_damage(damage : float):
 
 func sleep(seconds):
 	await get_tree().create_timer(seconds).timeout 
+
+
+func _on_attack_detection_area_body_entered(body):
+	if body.is_in_group("player"):
+		in_attack_range = true
+
+
+func _on_detection_area_body_entered(body):
+	if body.is_in_group("player"):
+		player = body
+
+
+func _on_attack_detection_area_body_exited(body):
+	if body.is_in_group("player"):
+		in_attack_range = false
