@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://imtk6lr5mi7q"]
+
+[ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_t4pep"]
+[ext_resource type="PackedScene" uid="uid://dn0qkha86nick" path="res://enemies/EnemyJavaScript.tscn" id="2_oq0du"]
+
+[node name="Sandbox" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_t4pep")]
+
+[node name="EnemyJavaScript" parent="." instance=ExtResource("2_oq0du")]
+position = Vector2(277, -2)
