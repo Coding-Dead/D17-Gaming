@@ -1,8 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://beswcwi376toj"]
-
-[ext_resource type="PackedScene" uid="uid://dn0qkha86nick" path="res://enemies/EnemyJavaScript.tscn" id="1_apani"]
+[gd_scene format=3 uid="uid://beswcwi376toj"]
 
 [node name="World" type="Node2D"]
 position = Vector2(-1, 0)
-
-[node name="EnemyJavaScript" parent="." instance=ExtResource("1_apani")]
