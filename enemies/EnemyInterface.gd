@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 @export var player : Node2D
 
 var speed : float = 0.0
@@ -10,9 +9,7 @@ var curr_health : float = 0.0
 var attack_cooldown : float = 0
 var curr_attack_cooldown : float = 0
 var damage : float = 0
-var touching_player : bool = false
 var is_ranged : bool = false
-var thorns_damage : float = 0
 var touching_monster : bool = false
 var random_direction : Vector2 = Vector2.ZERO
 var touching_mobs = []
@@ -33,34 +30,11 @@ func _physics_process(delta):
 	if player:
 		if in_attack_range:
 			attack_player()
-		
-		if not touching_player and not (is_ranged and in_attack_range):
+		else:
 			if touching_monster:
 				position += random_direction * 1.5
-			position = position.lerp(player.position, delta * speed)
-	
-	if touching_player:
-		player.take_damage(thorns_damage) 
-
-
-func _on_detection_area_body_entered(body):
-	if body.is_in_group("player"):
-		player = body
-
-
-func _on_detection_area_body_exited(body):
-	if body.is_in_group("player"):
-		player = null
-
-
-func _on_attack_detection_area_body_entered(body):
-	if body.is_in_group("player"):
-		in_attack_range = true
-
-
-func _on_attack_detection_area_body_exited(body):
-	if body.is_in_group("player"):
-		in_attack_range = false
+			var direction = (player.position - position).normalized()
+			position += direction * speed * delta
 
 
 func take_damage(damage : float):
