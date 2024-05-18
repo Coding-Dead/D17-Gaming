@@ -70,4 +70,3 @@ func _on_area_2d_area_entered(area: Area2D):
 		area.pick_up(self)
 		print("score:", self.score, " hp:", self.health)
 	
-		
