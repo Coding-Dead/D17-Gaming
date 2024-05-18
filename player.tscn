@@ -1,6 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://crqrei8gtj8kq"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_i8xsc"]
+
 [ext_resource type="PackedScene" uid="uid://c8n72wvwebu7p" path="res://bullet.tscn" id="2_y1gaq"]
 [ext_resource type="Texture2D" uid="uid://7wshudj4nvpc" path="res://assets/characters/Wacek.png" id="3_802q0"]
 

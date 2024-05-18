@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://d10nii27yv3ip"]
+
+[ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_45soo"]
+[ext_resource type="PackedScene" uid="uid://bceydgo47fp6" path="res://floors/second_floor.tscn" id="1_fl2dd"]
+[ext_resource type="PackedScene" uid="uid://dn0qkha86nick" path="res://enemies/EnemyJavaScript.tscn" id="2_ybuag"]
+[ext_resource type="PackedScene" uid="uid://o1l3n1akan3u" path="res://floors/ground_flor.tscn" id="3_04aej"]
+[ext_resource type="PackedScene" uid="uid://cg25kq22arbos" path="res://floors/third_floor.tscn" id="5_pgrb7"]
+[ext_resource type="PackedScene" uid="uid://cst5j82bdyntw" path="res://rooms_2/rooms/room4.tscn" id="7_8ae5e"]
+[ext_resource type="PackedScene" uid="uid://cbkjf1umi4hkf" path="res://rooms_2/rooms/room2.tscn" id="7_jdc3t"]
+
+[node name="Sandbox_SZCZs" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_45soo")]
+z_index = 1
+position = Vector2(-95, 40)
+
+[node name="EnemyJavaScript" parent="." instance=ExtResource("2_ybuag")]
+position = Vector2(277, -2)
+
+[node name="SecondFloor" parent="." instance=ExtResource("1_fl2dd")]
+position = Vector2(252, -1462)
+
+[node name="GroundFloor" parent="." instance=ExtResource("3_04aej")]
+position = Vector2(165, 95)
+
+[node name="ThirdFloor" parent="." instance=ExtResource("5_pgrb7")]
+position = Vector2(382, -3164)
+
+[node name="Aula" parent="." instance=ExtResource("7_jdc3t")]
+position = Vector2(-2887, -765)
+scale = Vector2(2, 2)
+
+[node name="Kible" parent="." instance=ExtResource("7_8ae5e")]
+position = Vector2(-121, 562)
+scale = Vector2(3, 3)

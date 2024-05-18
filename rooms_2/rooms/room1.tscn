@@ -1376,6 +1376,9 @@ texture = ExtResource("2_s4qke")
 [sub_resource type="TileSet" id="TileSet_ywi6n"]
 sources/0 = SubResource("TileSetAtlasSource_1dxvx")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_om0h4"]
+size = Vector2(39, 27)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3ghi"]
 size = Vector2(36.5, 187)
 
@@ -1387,9 +1390,6 @@ size = Vector2(40, 197)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86sm0"]
 size = Vector2(329.5, 39.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_om0h4"]
-size = Vector2(39, 27)
 
 [node name="Room1" type="Node2D"]
 
@@ -1403,26 +1403,26 @@ tile_set = SubResource("TileSet_ywi6n")
 format = 2
 layer_0/tile_data = PackedInt32Array(-131070, 458752, 28, -65534, 458752, 29, -131069, 524288, 28, -65533, 524288, 29, -131067, 458752, 28, -65531, 458752, 29, -131066, 524288, 28, -65530, 524288, 29, -131064, 458752, 28, -65528, 458752, 29, -131063, 524288, 28, -65527, 524288, 29, -131061, 458752, 28, -65525, 458752, 29, -131060, 524288, 28, -65524, 524288, 29, -131058, 458752, 28, -65522, 458752, 29, -131057, 524288, 28, -65521, 524288, 29, 65538, 196608, 40, 131074, 196608, 41, 196610, 196608, 40, 65539, 131072, 40, 131075, 131072, 41, 196611, 131072, 40, 65537, 131072, 40, 131073, 131072, 41, 196609, 131072, 40, 65540, 196608, 40, 131076, 196608, 41, 196612, 196608, 40, 327681, 131072, 40, 393217, 131072, 41, 458753, 131072, 40, 327682, 196608, 40, 393218, 196608, 41, 458754, 196608, 40, 327683, 131072, 40, 393219, 131072, 41, 458755, 131072, 40, 327684, 196608, 40, 393220, 196608, 41, 458756, 196608, 40, 65542, 131072, 40, 131078, 131072, 41, 196614, 131072, 40, 65543, 196608, 40, 131079, 196608, 41, 196615, 196608, 40, 65544, 131072, 40, 131080, 131072, 41, 196616, 131072, 40, 65545, 196608, 40, 131081, 196608, 41, 196617, 196608, 40, 327686, 131072, 40, 393222, 131072, 41, 458758, 131072, 40, 327687, 196608, 40, 393223, 196608, 41, 458759, 196608, 40, 327688, 131072, 40, 393224, 131072, 41, 458760, 131072, 40, 327689, 196608, 40, 393225, 196608, 41, 458761, 196608, 40, 65547, 327680, 10, 131083, 327680, 11, 196619, 327680, 12, 65548, 393216, 10, 131084, 393216, 11, 196620, 393216, 12, 65549, 458752, 10, 131085, 458752, 11, 196621, 458752, 12, 65550, 524288, 10, 131086, 524288, 11, 196622, 524288, 12, 327692, 0, 6, 393228, 0, 7, 458764, 0, 8, 262156, 0, 5, 262157, 131072, 5, 327693, 131072, 6, 458765, 196608, 9, 393229, 196608, 8, 65551, 655360, 40, 131087, 655360, 41, 65552, 720896, 40, 131088, 720896, 41, 262150, 131072, 41, 262151, 196608, 41, 262152, 131072, 41, 262153, 196608, 41, 262145, 131072, 41, 262146, 196608, 41, 524289, 131072, 41, 524290, 196608, 41, 262147, 131072, 41, 262148, 196608, 41, 524291, 131072, 41, 524292, 196608, 41, 524294, 131072, 41, 524295, 196608, 41, 524296, 131072, 41, 524297, 196608, 41, 655367, 0, 536870953, 655368, 65536, 536870953, 393231, 851968, 44, 458767, 851968, 45, 393232, 917504, 44, 458768, 917504, 45, 655361, 0, 536870938, 655362, 65536, 536870938, 655363, 131072, 536870938, 655364, 196608, 536870938, 589825, 0, 536870939, 589826, 65536, 536870939, 589827, 131072, 536870939, 589828, 196608, 536870939)
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="left_wall" type="CollisionShape2D" parent="Area2D" groups=["wall"]]
-position = Vector2(-12.75, 75)
-shape = SubResource("RectangleShape2D_a3ghi")
-
-[node name="top_wall" type="CollisionShape2D" parent="Area2D" groups=["wall"]]
-position = Vector2(146.5, -11.5)
-shape = SubResource("RectangleShape2D_kvjvt")
-
-[node name="right_wall" type="CollisionShape2D" parent="Area2D" groups=["wall"]]
-position = Vector2(300, 69.5)
-shape = SubResource("RectangleShape2D_bsbfs")
-
-[node name="bottom_wall" type="CollisionShape2D" parent="Area2D" groups=["wall"]]
-position = Vector2(156.25, 172.25)
-shape = SubResource("RectangleShape2D_86sm0")
-
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" groups=["door"]]
 position = Vector2(48.5, 156.5)
 shape = SubResource("RectangleShape2D_om0h4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="left_wall" type="CollisionShape2D" parent="StaticBody2D" groups=["wall"]]
+position = Vector2(-12.75, 75)
+shape = SubResource("RectangleShape2D_a3ghi")
+
+[node name="top_wall" type="CollisionShape2D" parent="StaticBody2D" groups=["wall"]]
+position = Vector2(146.5, -11.5)
+shape = SubResource("RectangleShape2D_kvjvt")
+
+[node name="right_wall" type="CollisionShape2D" parent="StaticBody2D" groups=["wall"]]
+position = Vector2(300, 69.5)
+shape = SubResource("RectangleShape2D_bsbfs")
+
+[node name="bottom_wall" type="CollisionShape2D" parent="StaticBody2D" groups=["wall"]]
+position = Vector2(156.25, 172.25)
+shape = SubResource("RectangleShape2D_86sm0")

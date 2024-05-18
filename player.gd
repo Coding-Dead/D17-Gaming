@@ -62,3 +62,4 @@ func take_damage(damage: float):
 	curr_health -= damage
 	if curr_health < 0:
 		print("nie zyje")
+
