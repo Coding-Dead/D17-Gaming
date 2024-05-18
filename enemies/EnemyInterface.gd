@@ -1,8 +1,7 @@
 extends CharacterBody2D
 
-signal health_change
 
-@onready var player = get_tree().get_nodes_in_group("player")[0] 
+@export var player : Node2D
 
 @onready var health_bar = $HealthBar
 
@@ -21,10 +20,6 @@ var random_direction : Vector2 = Vector2.ZERO
 var touching_mobs = []
 
 
-func _ready():
-	health_bar.max_value = curr_health
-	health_bar.value = curr_health
-
 
 
 func attack_player(): # This has to be overriden in order to work for ranged enemies
@@ -36,7 +31,6 @@ func attack_player(): # This has to be overriden in order to work for ranged ene
 
 
 func _physics_process(delta):
-	health_change.emit()
 	
 	if player:
 		if in_attack_range:
