@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://batb35ujw1uiw"]
+
+[ext_resource type="PackedScene" uid="uid://cbkjf1umi4hkf" path="res://rooms/room2.tscn" id="2_inh4a"]
+[ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="2_jbfov"]
+
+[node name="MichasScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.93, 0.66)
+
+[node name="Room2" parent="." instance=ExtResource("2_inh4a")]
+position = Vector2(-540, -359)
+scale = Vector2(1.97, 1.97)
+
+[node name="Player" parent="." instance=ExtResource("2_jbfov")]
+position = Vector2(-320, -159)
