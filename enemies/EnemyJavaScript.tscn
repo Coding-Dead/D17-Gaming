@@ -1,23 +1,24 @@
 [gd_scene load_steps=6 format=3 uid="uid://dn0qkha86nick"]
 
 [ext_resource type="Script" path="res://enemies/EnemyJavaScript.gd" id="1_wwiwc"]
-[ext_resource type="Texture2D" uid="uid://dlullapqiiq4g" path="res://dd.png" id="2_awtxh"]
+[ext_resource type="Texture2D" uid="uid://dkkyfv8esaipq" path="res://assets/enemies/js.png" id="2_v7moy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e1yf"]
 radius = 210.535
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nrpq"]
-radius = 13.0384
+radius = 23.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_44kv4"]
-radius = 5.0
+radius = 13.0
 
 [node name="EnemyJavaScript" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_wwiwc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_awtxh")
+position = Vector2(-2.98023e-08, -0.5)
+scale = Vector2(1.625, 1.5625)
+texture = ExtResource("2_v7moy")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 

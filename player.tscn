@@ -5,15 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://7wshudj4nvpc" path="res://assets/characters/Wacek.png" id="3_802q0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4tt4"]
-radius = 8.0
-height = 16.0
+radius = 6.0
+height = 18.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_i8xsc")
 Bullet = ExtResource("2_y1gaq")
 
 [node name="Muzzle" type="Marker2D" parent="."]
-position = Vector2(0, -56)
+position = Vector2(3, -4)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_802q0")

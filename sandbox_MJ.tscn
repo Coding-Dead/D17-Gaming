@@ -6,7 +6,7 @@
 [node name="Sandbox" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_u668d")]
-position = Vector2(79, 121)
+position = Vector2(465, 211)
 
 [node name="EnemyJavaScript" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_6lcu4")]
 position = Vector2(754, 201)
