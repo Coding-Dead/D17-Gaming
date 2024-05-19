@@ -27,6 +27,9 @@ func shoot():
 		var angle_offset = spread_angle * (i - (projectile_amount - 1) / 2.0)
 		var direction = position.direction_to(get_global_mouse_position()).rotated(deg_to_rad(angle_offset))
 		bullet.set_target(direction)
+		
+		var x = get_global_mouse_position() - position
+		bullet.rotate(x.angle())
 	
 func start_dash():
 	if last_input_direction != Vector2.ZERO:
