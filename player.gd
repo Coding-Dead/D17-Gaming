@@ -100,8 +100,8 @@ func take_damage(_damage: float):
 		print("nie zyje")
 
 func _on_area_2d_area_entered(area: Area2D):
-	if is_instance_of(area, Garek):
-		print("Garek")
+	#if is_instance_of(area, Garek):
+		#print("Garek")
 	if is_instance_of(area, Item):
 		area.pick_up(self)
 		print("score:", self.score, " hp:", self.health)

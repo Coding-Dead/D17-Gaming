@@ -12,7 +12,7 @@ func _on_body_entered(body):
 	#print(body.position)
 	if(body.name=="Player"):
 		#print(floor_up)
-		body.position= Vector2(-252,-1462)
+		body.position= Vector2(-350,-1460)
 		#get_tree().change_scene_to_file("res://floors/second_floor.tscn")
 
 
