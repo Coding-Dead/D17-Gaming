@@ -1,0 +1,8 @@
+[
+	{"name": "Dr. Wacław Frydrych", "text": "Witam! Prowadzę przedmiot Analiza Matematyczna hyhy"},
+	{"name": "Dr. Wacław Frydrych", "text": "Zobaczymy sobie co tam pamiętasz po maturce"},
+	{"name": "Dr. Wacław Frydrych", "question": "Pochodna ujemna to funckja pierwotna...", "answers": ["Rośnie", "Maleje", "Jest stała", "Nie da się określić"], "correct_answer": 1},
+	{"name": "Dr. Wacław Frydrych", "question": "Ciąg 3n+5 jest...",  "answers": ["Geometryczny", "Arytmetyczny", "Ani taki ani taki"], "correct_answer": 1},
+	{"name": "Dr. Wacław Frydrych", "question": "Rozwiąż równanie log(x-2) = 0", "answers": ["1", "2", "3", "4"], "correct_answer": 2},
+	{"name": "Dr. Wacław Frydrych", "text": "Dzięki za odpowiedzi:), coś nie coś jeszcze pamiętasz, resztę wiedzy sprwadzimy na zajęciach:)"}
+]

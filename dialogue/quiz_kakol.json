@@ -1,0 +1,8 @@
+[
+	{"name": "Prof. Zbigniew Kąkol", "text": "Witam, jestem wykładowcą fizyki, spotkasz się ze mną na drugim i trzecim semestrze."},
+	{"name": "Prof. Zbigniew Kąkol", "text": "Chciałbym zadać Ci kilka podstawowych pytań, żeby odświeżyć Twoją wiedzę z fizyki."},
+	{"name": "Prof. Zbigniew Kąkol", "question": "Jaka jest prędkość światła w próżni?", "answers": ["1. 300,000 km/s", "2. 150,000 km/s", "3. 450,000 km/s", "4. 600,000 km/s"], "correct_answer": 0},
+	{"name": "Prof. Zbigniew Kąkol", "question": "Jak nazywa się zjawisko, w którym światło zmienia kierunek przechodząc z jednego ośrodka do drugiego?", "answers": ["1. Dyfrakcja", "2. Odbicie", "3. Refrakcja", "4. Polaryzacja"], "correct_answer": 2},
+	{"name": "Prof. Zbigniew Kąkol", "question": "Jakie są trzy zasady dynamiki Newtona?", "answers": ["1. Siła, Masa, Przyspieszenie", "2. Bezwładność, Akcja i Reakcja, Przyspieszenie", "3. Siła, Bezwładność, Ruch jednostajny", "4. Siła, Akcja i Reakcja, Ruch jednostajny"], "correct_answer": 1},
+	{"name": "Prof. Zbigniew Kąkol", "text": "Powodzenia w dalszej grze i do zobaczenia na wykładach!"}
+]
