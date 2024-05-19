@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bq6r7dvjse28"]
+[gd_scene load_steps=23 format=3 uid="uid://bq6r7dvjse28"]
 
 [ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_45soo"]
 [ext_resource type="PackedScene" uid="uid://ddycv6xtarueb" path="res://rooms_2/rooms/room8.tscn" id="1_af4tc"]
@@ -22,8 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://bjch7ceq50yfj" path="res://enemies/EnemyAngular.tscn" id="20_1r5cr"]
 [ext_resource type="PackedScene" uid="uid://d24rpi1p2bdus" path="res://enemies/EnemyPython.tscn" id="21_mrqn2"]
 [ext_resource type="PackedScene" uid="uid://c21gv1o4t85ub" path="res://enemies/EnemyC.tscn" id="22_aq6ao"]
-[ext_resource type="PackedScene" uid="uid://dnesyofs3ojqg" path="res://NPCs/Garek.tscn" id="23_akmib"]
-[ext_resource type="PackedScene" uid="uid://dnwi3iyyt30qt" path="res://enemies/EnemyGitHub.tscn" id="25_dpbj6"]
 
 [node name="Sandbox_SZCZs" type="Node2D"]
 
@@ -101,9 +99,17 @@ position = Vector2(-84, 44)
 [node name="EnemySQL" parent="." instance=ExtResource("18_v510n")]
 position = Vector2(-336, -413)
 
+[node name="EnemyJava" parent="." instance=ExtResource("19_f8ppt")]
+position = Vector2(-380, -285)
+
 [node name="EnemyPi3" parent="." instance=ExtResource("17_g8nbk")]
-z_index = 1
 position = Vector2(-228, -285)
+
+[node name="EnemyAngular" parent="." instance=ExtResource("20_1r5cr")]
+position = Vector2(-6012, -6589)
+
+[node name="EnemyIntegral2" parent="." instance=ExtResource("16_41577")]
+position = Vector2(-5875, -6493)
 
 [node name="EnemyIntegral3" parent="." instance=ExtResource("16_41577")]
 position = Vector2(-5559, -6646)
@@ -123,6 +129,9 @@ position = Vector2(-5804, -6692)
 [node name="EnemyC" parent="." instance=ExtResource("22_aq6ao")]
 position = Vector2(-5285, -507)
 
+[node name="EnemyC2" parent="." instance=ExtResource("22_aq6ao")]
+position = Vector2(-5955, -276)
+
 [node name="EnemyAngular2" parent="." instance=ExtResource("20_1r5cr")]
 position = Vector2(-5689, -587)
 
@@ -135,41 +144,5 @@ position = Vector2(-5278, -244)
 [node name="EnemySQL2" parent="." instance=ExtResource("18_v510n")]
 position = Vector2(-5422, -664)
 
-[node name="Garek" parent="." instance=ExtResource("23_akmib")]
-position = Vector2(697, -185)
-
-[node name="EnemyAngular3" parent="." instance=ExtResource("20_1r5cr")]
-position = Vector2(556, -2709)
-
-[node name="EnemyAngular4" parent="." instance=ExtResource("20_1r5cr")]
-position = Vector2(-163, -2891)
-
-[node name="EnemyC3" parent="." instance=ExtResource("22_aq6ao")]
-position = Vector2(136, -2772)
-
-[node name="EnemyGitHub" parent="." instance=ExtResource("25_dpbj6")]
-position = Vector2(-375, -2924)
-
-[node name="EnemyJava2" parent="." instance=ExtResource("19_f8ppt")]
-position = Vector2(358, -2677)
-
-[node name="EnemyJava3" parent="." instance=ExtResource("19_f8ppt")]
-position = Vector2(-88, -2624)
-
-[node name="EnemyJavaScript6" parent="." instance=ExtResource("2_ybuag")]
-position = Vector2(709, -2820)
-
-[node name="EnemyPi6" parent="." instance=ExtResource("17_g8nbk")]
-position = Vector2(739, -2630)
-
-[node name="EnemyPython2" parent="." instance=ExtResource("21_mrqn2")]
-position = Vector2(291, -2791)
-
-[node name="EnemyPython3" parent="." instance=ExtResource("21_mrqn2")]
-position = Vector2(16, -2779)
-
-[node name="EnemySQL4" parent="." instance=ExtResource("18_v510n")]
-position = Vector2(16, -2688)
-
-[node name="EnemySQL5" parent="." instance=ExtResource("18_v510n")]
-position = Vector2(442, -2817)
+[node name="EnemySQL3" parent="." instance=ExtResource("18_v510n")]
+position = Vector2(-5648, -185)
