@@ -1,24 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://bw7e3fh63p5gt"]
+[gd_scene load_steps=6 format=3 uid="uid://dnwi3iyyt30qt"]
 
-[ext_resource type="Script" path="res://enemies/EnemySQL.gd" id="1_pud28"]
-[ext_resource type="Texture2D" uid="uid://be3qi6kp61pw4" path="res://assets/enemies/sql.png" id="2_aqwv0"]
+[ext_resource type="Script" path="res://enemies/EnemyGitHub.gd" id="1_g7pm3"]
+[ext_resource type="Texture2D" uid="uid://bncijrqp5wrk5" path="res://assets/enemies/github.png" id="2_ixtpr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e1yf"]
-radius = 235.009
+radius = 411.044
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nrpq"]
-radius = 212.021
+radius = 324.014
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_44kv4"]
 radius = 13.0
 
-[node name="EnemySQL" type="CharacterBody2D" groups=["enemy"]]
-script = ExtResource("1_pud28")
+[node name="EnemyGitHub" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_g7pm3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2.98023e-08, -0.5)
 scale = Vector2(1.625, 1.5625)
-texture = ExtResource("2_aqwv0")
+texture = ExtResource("2_ixtpr")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 

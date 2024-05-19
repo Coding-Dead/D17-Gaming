@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-@export var Bullet : PackedScene
 @export var player : Node2D
 
 var speed : float = 0.0
@@ -14,9 +13,11 @@ var is_ranged : bool = false
 var touching_monster : bool = false
 var random_direction : Vector2 = Vector2.ZERO
 var touching_mobs = []
+var charging_movement = false
 
 const HealItem = preload("res://items/HealItem.tscn")
 const ScoreItem = preload("res://items/ScoreItem.tscn")
+const Bullet = preload("res://bullet.tscn")
 const DamagePotion = preload("res://items/DamagePotion.tscn")
 const SpeedPotion = preload("res://items/SpeedPotion.tscn")
 
@@ -33,9 +34,12 @@ func _physics_process(delta):
 		if in_attack_range:
 			attack_player()
 		else:
-			var direction = (player.global_position - global_position).normalized()
-			velocity += direction * speed / 20
+			var calculated_dir = (player.global_position - global_position)
+			var direction = calculated_dir.normalized() if charging_movement else calculated_dir
+			velocity += direction * speed * delta
+			velocity = Vector2(min(velocity.x, 150), min(velocity.y, 150))
 			move_and_slide()
+
 
 func sleep(seconds):
 	await get_tree().create_timer(seconds).timeout 
@@ -48,7 +52,6 @@ func _on_attack_detection_area_body_entered(body):
 
 func _on_detection_area_body_entered(body):
 	if body.is_in_group("player") and not player:
-		print("FOUND PLAYER!")
 		player = body
 
 
