@@ -4,11 +4,13 @@ extends Item
 @export var hp : int = 100
 
 func _init():
-	item_name = "Health"
+	item_name = "Heal Potion"
 	type = ItemType.HEALTH
-	sprite = load("res://assets/enemies/java.png")
 
-func pick_up(_player : Player) -> void:
-	print("heal item picked up")
-	_player.curr_health += hp
+func pick_up(_player: Player, number_of_picked: int) -> void:
+	_player.curr_health += health_to_add(number_of_picked)
 	queue_free()
+	print("heal item picked up: ", number_of_picked)
+
+func health_to_add(number_of_picked: int) -> int:
+	return hp

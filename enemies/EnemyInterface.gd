@@ -18,6 +18,8 @@ var charging_movement = false
 const HealItem = preload("res://items/HealItem.tscn")
 const ScoreItem = preload("res://items/ScoreItem.tscn")
 const Bullet = preload("res://bullet.tscn")
+const DamagePotion = preload("res://items/DamagePotion.tscn")
+const SpeedPotion = preload("res://items/SpeedPotion.tscn")
 
 func attack_player(): # This has to be overriden in order to work for ranged enemies
 	if curr_attack_cooldown == 0:
@@ -61,7 +63,7 @@ func _on_attack_detection_area_body_exited(body):
 func take_damage(_damage : float):
 	curr_health -= _damage
 	if curr_health <= 0:
-		generate_items(position, randi_range(0, 3))
+		generate_items(position, randi_range(1, 3))
 		queue_free()
 
 
@@ -70,10 +72,14 @@ func generate_items(position: Vector2, no_items: int):
 	for i in range(no_items):
 		var delta_x : float = float(randi_range(-delta, delta))
 		var delta_y : float = float(randi_range(-delta, delta))
-		var j = randi() % 2
+		var j = randi() % 4
 		var item = null;
 		if j == 0:
 			item = ScoreItem.instantiate()
+		elif j == 1:
+			item = SpeedPotion.instantiate()
+		elif j == 2:
+			item = DamagePotion.instantiate()
 		else:
 			item = HealItem.instantiate()
 		item.position = Vector2(position.x+delta_x, position.y+delta_y)
