@@ -151,15 +151,17 @@ animations = [{
 script = ExtResource("1_i8xsc")
 Bullet = ExtResource("2_y1gaq")
 
+[node name="DebugLabel" type="Label" parent="."]
+offset_left = -482.0
+offset_top = -215.0
+offset_right = -442.0
+offset_bottom = -192.0
+
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(3, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_l4tt4")
-
-[node name="DebugLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
