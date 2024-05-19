@@ -14,11 +14,18 @@ func _ready():
 
 func _on_request_completed(result, response_code, headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
-	node1.text = ("1. " + str(json[0]['user_name']) + " : " + str(json[0]['score']))
-	node2.text = ("2. " + str(json[1]['user_name']) + " : " + str(json[1]['score']))
-	node3.text = ("3. " + str(json[2]['user_name']) + " : " + str(json[2]['score']))
-	node4.text = ("4. " + str(json[3]['user_name']) + " : " + str(json[3]['score']))
-	node5.text = ("5. " + str(json[4]['user_name']) + " : " + str(json[4]['score']))
+	var arr = []
+	for i in range(5):
+		if i >= len(json):
+			arr.append("")
+		else:
+			arr.append((str(i+1) + ". " + str(json[i]['user_name']) + " : " + str(json[i]['score'])))
+		
+	node1.text = arr[0]
+	node2.text = arr[1]
+	node3.text = arr[2]
+	node4.text = arr[3]
+	node5.text = arr[4]
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

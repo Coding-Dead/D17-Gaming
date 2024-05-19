@@ -21,5 +21,6 @@ func _process(delta):
 		var json = JSON.stringify(data_to_send)
 		var headers = ["Content-Type: application/json"]
 		$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, json)
+		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file("res://table.tscn")
 	pass
