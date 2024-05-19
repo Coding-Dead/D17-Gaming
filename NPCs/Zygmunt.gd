@@ -1,11 +1,11 @@
-class_name Garek
+class_name Zygmunt
 extends NPC
 
 func _ready():
-	position = Vector2(100, 0)
+	position = Vector2(300,600)
 
 func _on_body_entered(body):
-	print('Garek Tu')
+	print('Zygmunt Tu')
 
 func _on_chat_detection_area_body_exited(body):
 	print("LEAVING CHAT")

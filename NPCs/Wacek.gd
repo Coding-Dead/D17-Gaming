@@ -1,11 +1,11 @@
-class_name Garek
+class_name Wacek
 extends NPC
 
 func _ready():
-	position = Vector2(100, 0)
+	position = Vector2(0,300)
 
 func _on_body_entered(body):
-	print('Garek Tu')
+	print('Wacek Tu')
 
 func _on_chat_detection_area_body_exited(body):
 	print("LEAVING CHAT")

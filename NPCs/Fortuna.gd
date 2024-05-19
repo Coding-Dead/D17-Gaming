@@ -1,11 +1,11 @@
-class_name Garek
+class_name Fortuna
 extends NPC
 
 func _ready():
-	position = Vector2(100, 0)
+	position = Vector2(300,200)
 
 func _on_body_entered(body):
-	print('Garek Tu')
+	print('Fortuna Tu')
 
 func _on_chat_detection_area_body_exited(body):
 	print("LEAVING CHAT")
@@ -17,3 +17,7 @@ func _on_chat_detection_area_body_entered(body):
 
 func _on_dialogue_dialogue_finished():
 	print('fin')
+
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.
