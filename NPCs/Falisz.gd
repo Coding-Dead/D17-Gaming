@@ -13,7 +13,7 @@ func _on_chat_detection_area_body_exited(body):
 
 func _on_chat_detection_area_body_entered(body):
 	print("ENTERING CHAT")
-	$chat_detection_area/Dialogue.start()
+	$chat_detection_area/Dialogue.start("res://dialogue/falisz.json")
 
 func _on_dialogue_dialogue_finished():
 	print('fin')
