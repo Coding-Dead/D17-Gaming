@@ -11,6 +11,6 @@ var type: ItemType = ItemType.HEALTH;
 var chance: float = 0.5;
 var sprite = null;
 
-func pick_up(_player: Player) -> void:
+func pick_up(_player: Player, number_of_picked: int) -> void:
 	queue_free()
 
