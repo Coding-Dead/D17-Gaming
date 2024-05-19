@@ -13,6 +13,12 @@ func _process(delta):
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://sandbox_SCZZCZ.tscn")
-	var player = get_tree().get_nodes_in_group("player")[0]
-	player.position = Globals.next_player_position
-	#Player.position = Globals.last_player_position
+
+
+
+func _on_button_2_pressed():
+	get_tree().change_scene_to_file("res://sandbox_SCZZCZ.tscn")
+
+
+func _on_button_3_pressed():
+	get_tree().change_scene_to_file("res://sandbox_SCZZCZ.tscn")
