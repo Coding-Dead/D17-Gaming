@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d10nii27yv3ip"]
+[gd_scene load_steps=9 format=3 uid="uid://bq6r7dvjse28"]
 
 [ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_45soo"]
 [ext_resource type="PackedScene" uid="uid://bceydgo47fp6" path="res://floors/second_floor.tscn" id="1_fl2dd"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cg25kq22arbos" path="res://floors/third_floor.tscn" id="5_pgrb7"]
 [ext_resource type="PackedScene" uid="uid://cst5j82bdyntw" path="res://rooms_2/rooms/room4.tscn" id="7_8ae5e"]
 [ext_resource type="PackedScene" uid="uid://cbkjf1umi4hkf" path="res://rooms_2/rooms/room2.tscn" id="7_jdc3t"]
+[ext_resource type="PackedScene" uid="uid://c0eyxqxcuruk3" path="res://enemies/EnemySigma.tscn" id="8_fmqs0"]
 
 [node name="Sandbox_SZCZs" type="Node2D"]
 
@@ -15,7 +16,8 @@ z_index = 1
 position = Vector2(-95, 40)
 
 [node name="EnemyJavaScript" parent="." instance=ExtResource("2_ybuag")]
-position = Vector2(277, -2)
+z_index = 10
+position = Vector2(248, -38)
 
 [node name="SecondFloor" parent="." instance=ExtResource("1_fl2dd")]
 position = Vector2(252, -1462)
@@ -33,3 +35,6 @@ scale = Vector2(2, 2)
 [node name="Kible" parent="." instance=ExtResource("7_8ae5e")]
 position = Vector2(-121, 562)
 scale = Vector2(3, 3)
+
+[node name="EnemySigma" parent="." instance=ExtResource("8_fmqs0")]
+position = Vector2(-2378, -371)
