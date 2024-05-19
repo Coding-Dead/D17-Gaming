@@ -19,7 +19,7 @@ texture = ExtResource("2_8mji5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
 shape = SubResource("CircleShape2D_msutd")
 
-[node name="Dialogue" parent="chat_detection_area" instance=ExtResource("3_gg3dm")]
+[node name="ZygmuntDialogue" parent="chat_detection_area" instance=ExtResource("3_gg3dm")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6hyu2")
@@ -27,4 +27,4 @@ shape = SubResource("CircleShape2D_6hyu2")
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
-[connection signal="dialogue_finished" from="chat_detection_area/Dialogue" to="." method="_on_dialogue_dialogue_finished"]
+[connection signal="dialogue_finished" from="chat_detection_area/ZygmuntDialogue" to="." method="_on_dialogue_dialogue_finished"]

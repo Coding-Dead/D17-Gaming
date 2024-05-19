@@ -16,7 +16,7 @@ texture = ExtResource("2_7qtxw")
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 
-[node name="Dialogue" parent="chat_detection_area" instance=ExtResource("2_gbdgh")]
+[node name="WacekDialogue" parent="chat_detection_area" instance=ExtResource("2_gbdgh")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
 shape = SubResource("CircleShape2D_3imcm")
@@ -27,4 +27,4 @@ shape = SubResource("CircleShape2D_6awq7")
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
-[connection signal="dialogue_finished" from="chat_detection_area/Dialogue" to="chat_detection_area/Dialogue" method="_on_dialogue_finished"]
+[connection signal="dialogue_finished" from="chat_detection_area/WacekDialogue" to="chat_detection_area/WacekDialogue" method="_on_dialogue_finished"]
