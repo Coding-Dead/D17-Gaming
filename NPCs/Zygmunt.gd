@@ -17,3 +17,7 @@ func _on_chat_detection_area_body_entered(body):
 
 func _on_dialogue_dialogue_finished():
 	print('fin')
+
+
+func _on_chat_detection_area_area_entered(area):
+	pass # Replace with function body.

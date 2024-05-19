@@ -1,3 +1,30 @@
-[gd_scene format=3 uid="uid://dwsg0asuppda6"]
+[gd_scene load_steps=6 format=3 uid="uid://dwsg0asuppda6"]
 
-[node name="Kąkol" type="Node2D"]
+[ext_resource type="Script" path="res://NPCs/Kakol.gd" id="1_fcsay"]
+[ext_resource type="Texture2D" uid="uid://btw7t6er1nopp" path="res://assets/characters/Kąkol.png" id="2_78god"]
+[ext_resource type="PackedScene" uid="uid://dr4xh7g0ik0yx" path="res://dialogue/dialogue.tscn" id="2_mhjq6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bvho6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jh4ft"]
+
+[node name="Kąkol" type="Area2D"]
+script = ExtResource("1_fcsay")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_78god")
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="Dialogue" parent="chat_detection_area" instance=ExtResource("2_mhjq6")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+shape = SubResource("CircleShape2D_bvho6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jh4ft")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="chat_detection_area/Dialogue" to="." method="_on_dialogue_dialogue_finished"]

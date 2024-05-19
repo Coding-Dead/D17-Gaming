@@ -71,3 +71,15 @@ func next_script():
 		
 	$NinePatchRect/PageNumber.text = str(curr_dialogue_id + 1) + " / " + str(len(dialogue))
 		
+
+
+func _on_dialogue_finished():
+	pass # Replace with function body.
+
+
+func _on_wacek_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_chat_detection_area_body_entered(body):
+	pass # Replace with function body.
