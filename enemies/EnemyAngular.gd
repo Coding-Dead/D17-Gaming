@@ -18,7 +18,7 @@ func attack_player():
 			var bullet = Bullet.instantiate() 
 			bullet.damage = damage
 			bullet.speed = 200.0
-			bullet.time_to_live = 3.0
+			bullet.time_to_live = 4.0
 			bullet.switch_target()
 			add_child(bullet)
 
