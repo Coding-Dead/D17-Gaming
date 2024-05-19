@@ -111,6 +111,8 @@ func take_damage(_damage: float):
 	curr_health -= _damage
 	health_change.emit()
 	if curr_health < 0:
+		var file = FileAccess.open("res://global.txt", FileAccess.WRITE)
+		file.store_string(str(score))
 		get_tree().change_scene_to_file("res://ending_scene.tscn")
 		print("nie zyje")
 
