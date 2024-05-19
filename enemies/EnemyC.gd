@@ -2,7 +2,7 @@ class_name EnemyC
 extends "EnemyInterface.gd"
 
 func _init():
-	curr_health = 120.0
+	curr_health = 80.0
 	speed = 25.0
 	attack_cooldown = 150.0
 	damage = 20.0
@@ -18,6 +18,7 @@ func attack_player():
 			var bullet = Bullet.instantiate() 
 			bullet.damage = damage
 			bullet.speed = 400.0 
+			bullet.time_to_live = 2.0
 			bullet.switch_target()
 			add_child(bullet)
 

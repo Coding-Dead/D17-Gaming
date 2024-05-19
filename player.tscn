@@ -1,8 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://crqrei8gtj8kq"]
+[gd_scene load_steps=24 format=3 uid="uid://crqrei8gtj8kq"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_i8xsc"]
 [ext_resource type="PackedScene" uid="uid://c8n72wvwebu7p" path="res://bullet.tscn" id="2_y1gaq"]
-[ext_resource type="Texture2D" uid="uid://7wshudj4nvpc" path="res://assets/characters/Wacek.png" id="3_802q0"]
 [ext_resource type="Texture2D" uid="uid://bwe2j43kkwamt" path="res://assets/chibi-layered.png" id="4_iy7nu"]
 [ext_resource type="Script" path="res://HealthBar.gd" id="5_a0f06"]
 [ext_resource type="Texture2D" uid="uid://b27mpw3eewkb8" path="res://assets/health_bar2.png" id="5_ixl45"]
@@ -155,11 +154,6 @@ Bullet = ExtResource("2_y1gaq")
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(3, -4)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.5, -0.5)
-scale = Vector2(1.0625, 1.0625)
-texture = ExtResource("3_802q0")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_l4tt4")
 
@@ -187,9 +181,9 @@ visibility_layer = 524801
 z_index = 1000
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_stfw4")
-offset_left = -490.0
+offset_left = -566.0
 offset_top = -286.0
-offset_right = -362.0
+offset_right = -438.0
 offset_bottom = -254.0
 scale = Vector2(1.5, 1.5)
 value = 100.0
