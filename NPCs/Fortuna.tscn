@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dr4xh7g0ik0yx" path="res://dialogue/dialogue.tscn" id="3_m7cod"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wuxr4"]
+radius = 23.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u26sa"]
 
@@ -12,17 +13,26 @@
 script = ExtResource("1_cxqq8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
 texture = ExtResource("2_7lw7f")
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_wuxr4")
 
-[node name="Dialogue" parent="chat_detection_area" instance=ExtResource("3_m7cod")]
+[node name="FortunaDialogue" parent="chat_detection_area" instance=ExtResource("3_m7cod")]
+offset_left = -81.0
+offset_top = -136.0
+offset_right = -41.0
+offset_bottom = -96.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_u26sa")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="chat_detection_area/FortunaDialogue" to="." method="_on_dialogue_dialogue_finished"]

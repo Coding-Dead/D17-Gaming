@@ -1,5 +1,5 @@
 [
-	{"name": "Dziekan", "text": "Witaj! Jak mogę Ci dzisiaj pomóc?"},
+	{"name": "Falisz", "question": "Witaj! Jak mogę Ci dzisiaj pomóc?", "answers": ["Tak", "Nie"], "correct_answer": 0},
 	{"name": "Student", "text": "Dzień dobry! Chciałbym porozmawiać o moim planie zajęć na ten semestr."},
 	{"name": "Dziekan", "text": "Oczywiście, jakie masz pytania?"},
 	{"name": "Student", "text": "Czy mogę zmienić kilka kursów? Znalazłem inne, które bardziej odpowiadają moim zainteresowaniom."},

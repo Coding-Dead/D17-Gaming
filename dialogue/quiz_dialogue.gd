@@ -5,40 +5,48 @@ signal dialogue_finished
 @export_file("*.json") var d_file
 
 var dialogue = []
-var curr_dialogue_id = 0
+var curr_dialogue_id = -1
 var d_active = false
 var asked_question = false
 
 func _ready():
+	curr_dialogue_id = -1
 	$NinePatchRect.visible = false
 	#start()
 	
 func leave():
+	curr_dialogue_id = -1
+	asked_question = false
+	next_script()
 	$NinePatchRect.visible = false
 	
-func start():
+func start(path):
 	print("started here")
+	dialogue = load_dialogue(path)
 	$NinePatchRect.visible = true
+	asked_question = false
+	curr_dialogue_id = -1
 	if d_active:
+		next_script()
 		return
 	d_active = true
-	dialogue = load_dialogue()
-	curr_dialogue_id = -1
 	next_script()
 	
-func load_dialogue():
-	var file = FileAccess.open("res://dialogue/quiz.json", FileAccess.READ)
+func load_dialogue(path):
+	curr_dialogue_id = -1
+	print("json")
+	var file = FileAccess.open(path, FileAccess.READ)
 	var content = JSON.parse_string(file.get_as_text())
 	return content
 	
 func _input(event):
 	if !d_active:
 		return
-		
+
 	if asked_question:
 		if event is InputEventKey and event.pressed:
 			$NinePatchRect/BadAnswer.text = ""
-			if event.keycode - 49 == dialogue[curr_dialogue_id]["correct_answer"]:
+			if event.keycode-49<4 and event.keycode - 49 == dialogue[curr_dialogue_id]["correct_answer"]:
 				asked_question = false
 				next_script()
 			else:
@@ -70,4 +78,13 @@ func next_script():
 		$NinePatchRect/Text.text = dialogue[curr_dialogue_id]['text']
 		
 	$NinePatchRect/PageNumber.text = str(curr_dialogue_id + 1) + " / " + str(len(dialogue))
-		
+
+
+
+func _on_dialogue_finished():
+	curr_dialogue_id = -1
+
+func _on_chat_detection_area_body_entered(body):
+	curr_dialogue_id = -1
+
+

@@ -1,6 +1,7 @@
 class_name NPC
 extends Area2D
 
+const Player = preload("res://player.gd")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
