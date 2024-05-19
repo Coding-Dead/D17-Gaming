@@ -60,7 +60,7 @@ scale = Vector2(4, 4)
 
 [node name="shanon1" parent="." instance=ExtResource("12_pgwss")]
 position = Vector2(-6400, -6792)
-scale = Vector2(5.325, 5.325)
+scale = Vector2(2.47826, 3.33708)
 
 [node name="kapi2" parent="." instance=ExtResource("15_ixpot")]
 position = Vector2(-6072, 1616)

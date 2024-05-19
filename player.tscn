@@ -173,6 +173,7 @@ offset_bottom = 23.0
 shape = SubResource("CircleShape2D_bpovh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
