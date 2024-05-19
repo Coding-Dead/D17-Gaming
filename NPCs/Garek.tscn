@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnesyofs3ojqg"]
+
+[ext_resource type="Script" path="res://NPCs/Garek.gd" id="1_5j3fs"]
+[ext_resource type="Texture2D" uid="uid://fs200knx54is" path="res://assets/characters/Garek.png" id="1_aihqb"]
+[ext_resource type="PackedScene" uid="uid://dr4xh7g0ik0yx" path="res://dialogue/dialogue.tscn" id="3_ugj3a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d7chh"]
+radius = 24.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_omwlc"]
+
+[node name="Garek" type="Area2D"]
+script = ExtResource("1_5j3fs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aihqb")
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+shape = SubResource("CircleShape2D_d7chh")
+
+[node name="Dialogue" parent="chat_detection_area" instance=ExtResource("3_ugj3a")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_omwlc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="chat_detection_area/Dialogue" to="." method="_on_dialogue_dialogue_finished"]

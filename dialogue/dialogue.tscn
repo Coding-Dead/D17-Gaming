@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr4xh7g0ik0yx"]
+
+[ext_resource type="Script" path="res://dialogue/dialogueplayer.gd" id="1_bsmt3"]
+[ext_resource type="Texture2D" uid="uid://d2474i5s2i36" path="res://assets/inventory-slot.png" id="1_e3qhg"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -93.0
+offset_top = -62.0
+offset_right = -53.0
+offset_bottom = -22.0
+script = ExtResource("1_bsmt3")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -37.0
+offset_top = -24.0
+offset_right = 244.0
+offset_bottom = 110.0
+texture = ExtResource("1_e3qhg")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 2
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 316.0
+offset_bottom = 19.0
+text = "Name"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 274.0
+offset_bottom = 138.0
+text = "Text: "

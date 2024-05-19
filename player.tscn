@@ -89,7 +89,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_down",
-"speed": 7.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -123,7 +123,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -140,7 +140,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_up",
-"speed": 7.0
+"speed": 6.0
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]

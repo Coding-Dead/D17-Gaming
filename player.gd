@@ -45,7 +45,6 @@ func update_dash(delta):
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	print(input_direction, typeof(input_direction))
 
 	var dict = {
 		Vector2(1, 0): "walk_right",
@@ -68,8 +67,8 @@ func get_input():
 			$AnimatedSprite2D2.play(dict[Vector2(0, -1)])
 		Vector2(0, 0):
 			$AnimatedSprite2D2.play("idle")
-		_:
-			print("no animation for that")
+		#_:
+			#print("no animation for that")
 
 	
 	

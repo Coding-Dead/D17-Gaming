@@ -14,7 +14,6 @@
 
 [node name="EnemySQL" parent="." instance=ExtResource("1_uyavr")]
 position = Vector2(7, 250)
-player = NodePath("")
 
 [node name="Player" parent="." instance=ExtResource("1_u668d")]
 position = Vector2(465, 211)
@@ -22,7 +21,6 @@ position = Vector2(465, 211)
 [node name="EnemyJavaScript" parent="." instance=ExtResource("2_6lcu4")]
 position = Vector2(871, 140)
 Bullet = ExtResource("2_kdxsj")
-player = NodePath("")
 
 [node name="EnemyIntegral" parent="." instance=ExtResource("5_8f076")]
 position = Vector2(321, -255)
