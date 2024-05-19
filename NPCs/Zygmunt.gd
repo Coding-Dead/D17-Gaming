@@ -1,9 +1,6 @@
 class_name Zygmunt
 extends NPC
 
-func _ready():
-	position = Vector2(300,600)
-
 func _on_body_entered(body):
 	print('Zygmunt Tu')
 
@@ -15,7 +12,7 @@ func _on_chat_detection_area_body_exited(body):
 func _on_chat_detection_area_body_entered(body):
 	if is_instance_of(body, Player):
 		print("ENTERING CHAT")
-		$chat_detection_area/ZygmuntDialogue.start("res://dialogue/garek.json")
+		$chat_detection_area/ZygmuntDialogue.start("res://dialogue/quiz_zygmunt.json")
 
 func _on_dialogue_dialogue_finished():
 	print('fin')

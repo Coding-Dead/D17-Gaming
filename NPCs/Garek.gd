@@ -1,8 +1,6 @@
 class_name Garek
 extends NPC
 
-func _ready():
-	pass
 
 func _on_body_entered(body):
 	print('Garek Tu')

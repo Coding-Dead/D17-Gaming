@@ -1,0 +1,9 @@
+[
+	{"name": "Prof. Piotr Faliszewski", "text": "Witaj przyszły studencie!  "},
+	{"name": "Prof. Piotr Faliszewski", "text": "Od teraz będę się do Ciebie zwracał Harold. "},
+	{"name": "Prof. Piotr Faliszewski", "text": "A więc Haroldzie, zadam Ci kilka pytań. Odpowiesz dobrze - dostaniesz nagrodę, aczkolwiek zła odpowiedzieć - oj nie chciałbym być na Twoim miejscu."},
+	{"name": "Prof. Piotr Faliszewski", "question": "Jaka złożoność czasowa algorytmu jest Twoim zdaniem najwydajniejsza?", "answers": ["Liniowa", "Kwadratowa", "Wykładnicza", "Logarytmiczna"], "correct_answer": 3},
+	{"name": "Prof. Piotr Faliszewski", "question": "Jak zapisać 15 binarnie?",  "answers": ["1110", "1010", "1111", "1000"], "correct_answer": 2},
+	{"name": "Prof. Piotr Faliszewski", "question": "Zgadnij, wolę koty czy psy?", "answers": ["Koty", "Psy"], "correct_answer": 0},
+	{"name": "Prof. Piotr Faliszewski", "text": "Jeśli przetrwałeś do tego etapu, to gratuluję;) i powodzenia!"}
+]
