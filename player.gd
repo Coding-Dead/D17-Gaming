@@ -27,6 +27,9 @@ func shoot():
 		var angle_offset = spread_angle * (i - (projectile_amount - 1) / 2.0)
 		var direction = position.direction_to(get_global_mouse_position()).rotated(deg_to_rad(angle_offset))
 		bullet.set_target(direction)
+		
+		var x = get_global_mouse_position() - position
+		bullet.rotate(x.angle())
 	
 func start_dash():
 	if last_input_direction != Vector2.ZERO:
@@ -42,6 +45,37 @@ func update_dash(delta):
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
+	print(input_direction, typeof(input_direction))
+
+	var dict = {
+		Vector2(1, 0): "walk_right",
+		Vector2(0, 1): "walk_down",
+		Vector2(-1, 0): "walk_left",
+		Vector2(0, -1): "walk_up",
+		Vector2(0, 0): "idle"
+	}
+
+	match input_direction:
+		Vector2(1, 0):
+			$AnimatedSprite2D2.flip_h = true
+			$AnimatedSprite2D2.play(dict[Vector2(1, 0)])
+		Vector2(0, 1):
+			$AnimatedSprite2D2.play(dict[Vector2(0, 1)])
+		Vector2(-1, 0):
+			$AnimatedSprite2D2.flip_h = false
+			$AnimatedSprite2D2.play(dict[Vector2(-1, 0)])
+		Vector2(0, -1):
+			$AnimatedSprite2D2.play(dict[Vector2(0, -1)])
+		Vector2(0, 0):
+			$AnimatedSprite2D2.play("idle")
+		_:
+			print("no animation for that")
+
+	
+	
+	
+	
+	
 	if not is_dashing:
 		velocity = input_direction * speed
 		if input_direction != Vector2.ZERO:
@@ -66,7 +100,10 @@ func take_damage(_damage: float):
 		print("nie zyje")
 
 func _on_area_2d_area_entered(area: Area2D):
+	if is_instance_of(area, Garek):
+		print("Garek")
 	if is_instance_of(area, Item):
 		area.pick_up(self)
 		print("score:", self.score, " hp:", self.health)
+
 	
