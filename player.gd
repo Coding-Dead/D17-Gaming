@@ -15,7 +15,6 @@ signal health_change
 
 const Item = preload("res://items/Item.gd")
 
-const Item = preload("res://items/Item.gd")
 
 var curr_health: float = 100.0
 var is_dashing = false
