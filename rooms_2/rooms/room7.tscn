@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cx6gmcobnp587"]
 
-[ext_resource type="Texture2D" uid="uid://6op8lsgxelyd" path="res://rooms/16x16/Room_Builder_free_16x16.png" id="1_ri5xu"]
-[ext_resource type="Texture2D" uid="uid://dxp3vvkfbokc4" path="res://rooms/16x16/Interiors_free_16x16.png" id="2_bcve2"]
+[ext_resource type="Texture2D" uid="uid://6op8lsgxelyd" path="res://rooms_2/rooms/16x16/Room_Builder_free_16x16.png" id="1_ri5xu"]
+[ext_resource type="Texture2D" uid="uid://dxp3vvkfbokc4" path="res://rooms_2/rooms/16x16/Interiors_free_16x16.png" id="2_bcve2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wl0q3"]
 texture = ExtResource("1_ri5xu")

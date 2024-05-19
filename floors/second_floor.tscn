@@ -553,9 +553,9 @@ script = ExtResource("2_5c0jt")
 position = Vector2(-122, 174)
 shape = SubResource("CircleShape2D_37ie3")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="room21" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room21"]
 position = Vector2(-289.5, -26)
 shape = SubResource("RectangleShape2D_tejsb")
 
@@ -578,3 +578,7 @@ position = Vector2(-864.5, -264)
 shape = SubResource("RectangleShape2D_7vn8f")
 
 [connection signal="body_entered" from="elevator_to_second" to="elevator_to_second" method="_on_body_entered"]
+[connection signal="body_entered" from="room21" to="elevator_to_second" method="_on_room_21_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="elevator_to_second" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="elevator_to_second" method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="elevator_to_second" method="_on_area_2d_4_body_entered"]

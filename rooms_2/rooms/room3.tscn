@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dqosbc336hm1c"]
+[gd_scene load_steps=13 format=3 uid="uid://dqosbc336hm1c"]
 
-[ext_resource type="Texture2D" uid="uid://6op8lsgxelyd" path="res://rooms/16x16/Room_Builder_free_16x16.png" id="1_7r47r"]
-[ext_resource type="Texture2D" uid="uid://dxp3vvkfbokc4" path="res://rooms/16x16/Interiors_free_16x16.png" id="2_jfp85"]
+[ext_resource type="Texture2D" uid="uid://6op8lsgxelyd" path="res://rooms_2/rooms/16x16/Room_Builder_free_16x16.png" id="1_7r47r"]
+[ext_resource type="Script" path="res://rooms_2/rooms/room3.gd" id="1_h0es7"]
+[ext_resource type="Texture2D" uid="uid://dxp3vvkfbokc4" path="res://rooms_2/rooms/16x16/Interiors_free_16x16.png" id="2_jfp85"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wl0q3"]
 texture = ExtResource("1_7r47r")
@@ -1392,6 +1393,7 @@ size = Vector2(40, 197)
 size = Vector2(329.5, 39.5)
 
 [node name="Room3" type="Node2D"]
+script = ExtResource("1_h0es7")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_2b1ov")
@@ -1426,3 +1428,5 @@ shape = SubResource("RectangleShape2D_bsbfs")
 [node name="bottom_wall" type="CollisionShape2D" parent="StaticBody2D" groups=["wall"]]
 position = Vector2(156.25, 172.25)
 shape = SubResource("RectangleShape2D_86sm0")
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
