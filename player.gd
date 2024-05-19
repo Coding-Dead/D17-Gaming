@@ -60,6 +60,7 @@ func update_dash(delta):
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
+	print(input_direction, typeof(input_direction))
 
 	var dict = {
 		Vector2(1, 0): "walk_right",
@@ -110,6 +111,9 @@ func take_damage(_damage: float):
 	curr_health -= _damage
 	health_change.emit()
 	if curr_health < 0:
+		var file = FileAccess.open("res://global.txt", FileAccess.WRITE)
+		file.store_string(str(score))
+		get_tree().change_scene_to_file("res://ending_scene.tscn")
 		print("nie zyje")
 
 
