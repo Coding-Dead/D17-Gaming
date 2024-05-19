@@ -8,12 +8,14 @@ func _on_body_entered(body):
 	print('Adamus Tu')
 
 func _on_chat_detection_area_body_exited(body):
-	print("LEAVING CHAT")
-	$chat_detection_area/AdamusDialogue.leave()
+	if is_instance_of(body, Player):
+		print("LEAVING CHAT")
+		$chat_detection_area/AdamusDialogue.leave()
 
 func _on_chat_detection_area_body_entered(body):
-	print("ENTERING CHAT")
-	$chat_detection_area/AdamusDialogue.start("res://dialogue/garek.json")
+	if is_instance_of(body, Player):
+		print("ENTERING CHAT")
+		$chat_detection_area/AdamusDialogue.start("res://dialogue/garek.json")
 
 func _on_dialogue_dialogue_finished():
 	print('fin')
