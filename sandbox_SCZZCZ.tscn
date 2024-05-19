@@ -23,8 +23,7 @@
 [ext_resource type="PackedScene" path="res://enemies/EnemyPython.tscn" id="21_mrqn2"]
 [ext_resource type="PackedScene" uid="uid://c21gv1o4t85ub" path="res://enemies/EnemyC.tscn" id="22_aq6ao"]
 [ext_resource type="PackedScene" uid="uid://dnesyofs3ojqg" path="res://NPCs/Garek.tscn" id="23_akmib"]
-[ext_resource type="PackedScene" uid="uid://dnwi3iyyt30qt" path="res://enemies/EnemyGitHub.tscn" id="25_dpbj6"]
-
+[ext_resource type="PackedScene" path="res://enemies/EnemyGitHub.tscn" id="25_dpbj6"]
 
 [node name="Sandbox_SZCZs" type="Node2D"]
 
@@ -36,7 +35,7 @@ scale = Vector2(3.5, 3.5)
 
 [node name="Player" parent="." instance=ExtResource("1_45soo")]
 z_index = 1
-position = Vector2(580, 83)
+position = Vector2(579, 83)
 
 [node name="EnemyJavaScript" parent="." instance=ExtResource("2_ybuag")]
 z_index = 10
