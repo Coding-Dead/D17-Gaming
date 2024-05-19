@@ -1,15 +1,13 @@
-
-[gd_scene load_steps=12 format=3 uid="uid://o2a5xy8ossls"]
+[gd_scene load_steps=14 format=3 uid="uid://o2a5xy8ossls"]
 
 [ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_u668d"]
 [ext_resource type="PackedScene" uid="uid://bw7e3fh63p5gt" path="res://enemies/EnemySQL.tscn" id="1_uyavr"]
 [ext_resource type="PackedScene" uid="uid://dn0qkha86nick" path="res://enemies/EnemyJavaScript.tscn" id="2_6lcu4"]
-[ext_resource type="PackedScene" path="res://enemies/EnemyIntegral.tscn" id="5_8f076"]
+[ext_resource type="PackedScene" uid="uid://cgkhv1ux7r3o6" path="res://enemies/EnemyIntegral.tscn" id="5_8f076"]
 [ext_resource type="PackedScene" uid="uid://c0eyxqxcuruk3" path="res://enemies/EnemySigma.tscn" id="6_qca8h"]
-[ext_resource type="PackedScene" path="res://enemies/EnemyPi.tscn" id="7_qcrvm"]
+[ext_resource type="PackedScene" uid="uid://bu3f6vti78hcw" path="res://enemies/EnemyPi.tscn" id="7_qcrvm"]
 [ext_resource type="PackedScene" uid="uid://c21gv1o4t85ub" path="res://enemies/EnemyC.tscn" id="8_3pgpn"]
 [ext_resource type="PackedScene" uid="uid://doxg5oq0lgpo2" path="res://NPCs/Falisz.tscn" id="9_30dhs"]
-[ext_resource type="PackedScene" uid="uid://dnesyofs3ojqg" path="res://NPCs/Garek.tscn" id="9_d2xxl"]
 [ext_resource type="PackedScene" uid="uid://ytcu1y7lj4od" path="res://NPCs/Adamus.tscn" id="10_dywrc"]
 [ext_resource type="PackedScene" uid="uid://deeaant2xoipp" path="res://NPCs/Fortuna.tscn" id="11_71efg"]
 [ext_resource type="PackedScene" uid="uid://dwsg0asuppda6" path="res://NPCs/Kakol.tscn" id="12_fevgv"]
@@ -50,4 +48,3 @@ position = Vector2(215, 72)
 [node name="Zygmunt" parent="." instance=ExtResource("14_y16f7")]
 
 [node name="Wacek" parent="." instance=ExtResource("13_5j5h5")]
-
