@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdjx6yov73pmy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d71o3"]
+load_path = "res://.godot/imported/welocome.png-6200ab81fe67f2fd1ed9d7b9f3b31c51.ctex"
+
+[node name="Welcome" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_d71o3")
