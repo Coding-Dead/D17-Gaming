@@ -556,25 +556,28 @@ position = Vector2(16, 1)
 shape = SubResource("RectangleShape2D_jcb3i")
 script = ExtResource("3_m62h7")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="wc" type="Area2D" parent="."]
 
-[node name="WC" type="CollisionShape2D" parent="Area2D"]
+[node name="WC" type="CollisionShape2D" parent="wc"]
 position = Vector2(-272.625, -24)
 shape = SubResource("RectangleShape2D_d5mgn")
 
-[node name="Area2D2" type="Area2D" parent="."]
+[node name="shanon" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="Shanon" type="CollisionShape2D" parent="shanon"]
 position = Vector2(328, -110)
 shape = SubResource("RectangleShape2D_i8p0j")
 
-[node name="Area2D3" type="Area2D" parent="."]
+[node name="stolowka" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+[node name="stolowka" type="CollisionShape2D" parent="stolowka"]
 position = Vector2(-856, -263)
 shape = SubResource("RectangleShape2D_b7t7e")
 
 [connection signal="area_entered" from="elevator_up" to="elevator_up" method="_on_area_entered"]
 [connection signal="area_entered" from="elevator_up" to="elevator_up" method="_on__elevator_area_entered"]
-[connection signal="body_entered" from="elevator_up" to="elevator_up" method="_on_body_entered"]
+[connection signal="body_entered" from="elevator_up" to="elevator_up" method="_on_first_elevator_entered"]
 [connection signal="body_entered" from="aula" to="elevator_up" method="_on_aula_body_entered"]
+[connection signal="body_entered" from="wc" to="elevator_up" method="_on_first_WC_entered"]
+[connection signal="body_entered" from="shanon" to="elevator_up" method="_on_first_shanon_body_entered"]
+[connection signal="body_entered" from="stolowka" to="elevator_up" method="_on_first_stolowka_body_entered"]
