@@ -13,4 +13,4 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		body.position= Vector2(20,0)
+		body.position= Vector2(0,0) # Replace with function body.
