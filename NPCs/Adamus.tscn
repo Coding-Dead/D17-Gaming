@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://ytcu1y7lj4od"]
+
+[ext_resource type="Script" path="res://NPCs/Adamus.gd" id="1_fm3xo"]
+[ext_resource type="Texture2D" uid="uid://wpi5j43ssdm3" path="res://assets/characters/Adamus.png" id="2_d01vs"]
+[ext_resource type="PackedScene" uid="uid://dr4xh7g0ik0yx" path="res://dialogue/dialogue.tscn" id="3_6elur"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kmgfn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_55rde"]
+
+[node name="Adamus" type="Area2D"]
+script = ExtResource("1_fm3xo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_d01vs")
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+shape = SubResource("CircleShape2D_kmgfn")
+
+[node name="Dialogue" parent="chat_detection_area" instance=ExtResource("3_6elur")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_55rde")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]

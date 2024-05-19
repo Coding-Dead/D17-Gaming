@@ -4,7 +4,8 @@
 [ext_resource type="Script" path="res://enemies/EnemyPython.gd" id="1_y8sfj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e1yf"]
-radius = 415.001
+
+radius = 600.003
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nrpq"]
 radius = 325.002
