@@ -3,7 +3,7 @@ class_name Item
 
 const Player = preload("res://player.gd")
 
-enum ItemType {HEALTH, SCORE}
+enum ItemType {HEALTH, SCORE, DAMAGE, SPEED}
 
 var item_name : String = ""
 var is_picked_up : bool = false;
