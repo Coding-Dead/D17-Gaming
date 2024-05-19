@@ -19,6 +19,7 @@ func _on_body_entered(body):
 func _on_chat_detection_area_body_exited(body):
 	print("LEAVING CHAT")
 	$chat_detection_area/Dialogue.leave()
+
 	#if body.has_method("Player"):
 		#print("In chat")
 

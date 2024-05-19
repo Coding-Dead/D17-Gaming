@@ -23,6 +23,7 @@ position = Vector2(465, 211)
 
 [node name="EnemyJavaScript" parent="." instance=ExtResource("2_6lcu4")]
 position = Vector2(871, 140)
+Bullet = ExtResource("2_kdxsj")
 
 [node name="EnemyIntegral" parent="." instance=ExtResource("5_8f076")]
 position = Vector2(321, -255)
