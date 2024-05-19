@@ -12,6 +12,8 @@ func _on_body_entered(body):
 	#print(body.position)
 	if(body.name=="Player"):
 		#print(floor_up)
+		#get_tree().change_scene_to_file("res://path_choice.tscn")
+		Globals.next_player_position = Vector2(-350,-1460)
 		body.position= Vector2(-350,-1460)
 		#get_tree().change_scene_to_file("res://floors/second_floor.tscn")
 

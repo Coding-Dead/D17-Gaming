@@ -97,6 +97,7 @@ func _physics_process(delta):
 func take_damage(_damage: float):
 	curr_health -= _damage
 	if curr_health < 0:
+		get_tree().change_scene_to_file("res://ending_scene.tscn")
 		print("nie zyje")
 
 func _on_area_2d_area_entered(area: Area2D):
@@ -105,5 +106,8 @@ func _on_area_2d_area_entered(area: Area2D):
 	if is_instance_of(area, Item):
 		area.pick_up(self)
 		print("score:", self.score, " hp:", self.health)
+
+func teleport(pos: Vector2):
+	position = pos
 
 	
