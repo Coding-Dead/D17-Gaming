@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dr4xh7g0ik0yx" path="res://dialogue/dialogue.tscn" id="3_ugj3a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d7chh"]
-radius = 24.0
+radius = 23.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_omwlc"]
 
@@ -13,16 +13,23 @@ radius = 24.0
 script = ExtResource("1_5j3fs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
 texture = ExtResource("1_aihqb")
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_d7chh")
 
 [node name="GarekDialogue" parent="chat_detection_area" instance=ExtResource("3_ugj3a")]
+offset_left = -65.0
+offset_top = -141.0
+offset_right = -25.0
+offset_bottom = -101.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_omwlc")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

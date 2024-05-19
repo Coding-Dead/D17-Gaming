@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dr4xh7g0ik0yx" path="res://dialogue/dialogue.tscn" id="2_mhjq6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bvho6"]
+radius = 23.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jh4ft"]
 
@@ -12,16 +13,23 @@
 script = ExtResource("1_fcsay")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
 texture = ExtResource("2_78god")
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 
 [node name="KakolDialogue" parent="chat_detection_area" instance=ExtResource("2_mhjq6")]
+offset_left = -66.0
+offset_top = -138.0
+offset_right = -26.0
+offset_bottom = -98.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_bvho6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_jh4ft")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

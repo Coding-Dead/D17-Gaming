@@ -5,23 +5,32 @@
 [ext_resource type="PackedScene" uid="uid://dr4xh7g0ik0yx" path="res://dialogue/dialogue.tscn" id="3_1lpws"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t0wmm"]
+radius = 23.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a43o3"]
+radius = 22.8
 
 [node name="Falisz" type="Area2D"]
 script = ExtResource("1_e7de4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
 texture = ExtResource("2_b34lu")
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_t0wmm")
 
 [node name="FaliszDialogue" parent="chat_detection_area" instance=ExtResource("3_1lpws")]
+offset_left = -69.0
+offset_top = -145.0
+offset_right = -29.0
+offset_bottom = -105.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_a43o3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

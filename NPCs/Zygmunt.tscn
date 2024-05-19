@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dr4xh7g0ik0yx" path="res://dialogue/dialogue.tscn" id="3_gg3dm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_msutd"]
+radius = 23.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6hyu2"]
 
@@ -12,16 +13,23 @@
 script = ExtResource("1_epkk5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
 texture = ExtResource("2_8mji5")
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_msutd")
 
 [node name="ZygmuntDialogue" parent="chat_detection_area" instance=ExtResource("3_gg3dm")]
+offset_left = -84.0
+offset_top = -143.0
+offset_right = -44.0
+offset_bottom = -103.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_6hyu2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
