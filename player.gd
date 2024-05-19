@@ -15,6 +15,8 @@ signal health_change
 
 const Item = preload("res://items/Item.gd")
 
+const Item = preload("res://items/Item.gd")
+
 var curr_health: float = 100.0
 var is_dashing = false
 var dash_time_left = 0
@@ -60,7 +62,6 @@ func update_dash(delta):
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	print(input_direction, typeof(input_direction))
 
 	var dict = {
 		Vector2(1, 0): "walk_right",
@@ -85,7 +86,6 @@ func get_input():
 			$AnimatedSprite2D2.play("idle")
 		_:
 			pass
-
 
 	if not is_dashing:
 		velocity = input_direction * speed
