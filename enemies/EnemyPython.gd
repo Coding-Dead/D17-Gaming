@@ -1,24 +1,24 @@
-class_name EnemyJavaScript
+class_name EnemyPython
 extends "EnemyInterface.gd"
 
 func _init():
-	curr_health = 100.0
+	curr_health = 200.0
 	speed = 30.0
-	attack_cooldown = 30.0
-	damage = 10.0
+	attack_cooldown = 400.0
+	damage = 30.0
 	is_ranged = true
 	charging_movement = true
 
 
 func attack_player():
 	if curr_attack_cooldown == 0:
-		var spread_angle = 0
+		var spread_angle = 5
 		
-		for i in range(1):
+		for i in range(10):
 			var bullet = Bullet.instantiate() 
 			bullet.damage = damage
-			bullet.speed = 200.0 
-			bullet.time_to_live = 2.0
+			bullet.speed = 500.0
+			bullet.time_to_live = 3.0
 			bullet.switch_target()
 			add_child(bullet)
 

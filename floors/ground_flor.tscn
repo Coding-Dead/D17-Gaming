@@ -556,7 +556,7 @@ script = ExtResource("3_m62h7")
 position = Vector2(-277.75, -7.75)
 shape = SubResource("RectangleShape2D_d5mgn")
 
-[connection signal="area_entered" from="elevator_up" to="elevator_up" method="_on__elevator_area_entered"]
 [connection signal="area_entered" from="elevator_up" to="elevator_up" method="_on_area_entered"]
+[connection signal="area_entered" from="elevator_up" to="elevator_up" method="_on__elevator_area_entered"]
 [connection signal="body_entered" from="elevator_up" to="elevator_up" method="_on_body_entered"]
 [connection signal="body_entered" from="aula" to="elevator_up" method="_on_aula_body_entered"]
