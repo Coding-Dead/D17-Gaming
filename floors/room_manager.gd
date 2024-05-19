@@ -18,7 +18,7 @@ var current_floor=0
 
 
 func _on_first_elevator_entered(body):
-	if(rooms_entered[0]==0):
+	if(rooms_entered[0]<=0):
 		if(body.name=="Player"):
 			body.position= cords["Floor2"]
 		

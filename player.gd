@@ -40,7 +40,8 @@ func shoot():
 	if curr_attack_cooldown == 0:
 		for i in range(projectile_amount):
 			var bullet = Bullet.instantiate()
-			bullet.damage = damage  
+			bullet.damage = damage 
+			bullet.speed = 1200.0
 			add_child(bullet)
 			var angle_offset = spread_angle * (i - (projectile_amount - 1) / 2.0)
 			var direction = position.direction_to(get_global_mouse_position()).rotated(deg_to_rad(angle_offset))
