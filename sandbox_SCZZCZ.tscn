@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://bq6r7dvjse28"]
 
 [ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_45soo"]
-[ext_resource type="PackedScene" uid="uid://ddycv6xtarueb" path="res://rooms_2/rooms/room8.tscn" id="1_af4tc"]
+[ext_resource type="PackedScene" path="res://rooms_2/rooms/room8.tscn" id="1_af4tc"]
 [ext_resource type="PackedScene" uid="uid://bceydgo47fp6" path="res://floors/second_floor.tscn" id="1_fl2dd"]
 [ext_resource type="PackedScene" uid="uid://dn0qkha86nick" path="res://enemies/EnemyJavaScript.tscn" id="2_ybuag"]
 [ext_resource type="PackedScene" uid="uid://o1l3n1akan3u" path="res://floors/ground_flor.tscn" id="3_04aej"]
@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://dqosbc336hm1c" path="res://rooms_2/rooms/room3.tscn" id="11_iqu7b"]
 [ext_resource type="PackedScene" uid="uid://dbrfgus0et1rx" path="res://rooms_2/rooms/room5.tscn" id="12_pgwss"]
 [ext_resource type="PackedScene" uid="uid://b0yx7oekam53u" path="res://rooms_2/rooms/room6.tscn" id="13_p28hk"]
-[ext_resource type="PackedScene" uid="uid://cx6gmcobnp587" path="res://rooms_2/rooms/room7.tscn" id="15_ixpot"]
-[ext_resource type="PackedScene" uid="uid://bpaku7nhvttkx" path="res://ending_scene.tscn" id="15_qfp4n"]
+[ext_resource type="PackedScene" path="res://rooms_2/rooms/room7.tscn" id="15_ixpot"]
+[ext_resource type="PackedScene" uid="uid://dt257e21ckdxn" path="res://ending_scene.tscn" id="15_qfp4n"]
 
 [node name="Sandbox_SZCZs" type="Node2D"]
 

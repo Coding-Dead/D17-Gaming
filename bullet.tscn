@@ -10,9 +10,7 @@ radius = 6.0
 script = ExtResource("1_vputh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.0743272, 0.0743236)
 rotation = 1.5708
-scale = Vector2(1.72468, 1.76183)
 texture = ExtResource("2_pafew")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dkkyfv8esaipq" path="res://assets/enemies/js.png" id="2_v7moy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e1yf"]
-radius = 306.026
+radius = 210.535
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nrpq"]
-radius = 247.0
+radius = 23.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_44kv4"]
 radius = 13.0
