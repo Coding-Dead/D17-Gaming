@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dr4xh7g0ik0yx"]
 
-[ext_resource type="Script" path="res://dialogue/dialogueplayer.gd" id="1_bsmt3"]
 [ext_resource type="Texture2D" uid="uid://d2474i5s2i36" path="res://assets/inventory-slot.png" id="1_e3qhg"]
+[ext_resource type="Script" path="res://dialogue/quiz_dialogue.gd" id="1_q7pnk"]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ offset_left = -93.0
 offset_top = -62.0
 offset_right = -53.0
 offset_bottom = -22.0
-script = ExtResource("1_bsmt3")
+script = ExtResource("1_q7pnk")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
@@ -40,11 +40,17 @@ offset_right = 274.0
 offset_bottom = 138.0
 text = "Text: "
 
+[node name="BadAnswer" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 81.0
+offset_right = 212.0
+offset_bottom = 128.0
+
 [node name="PageNumber" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 238.0
-offset_top = 110.0
-offset_right = 308.0
-offset_bottom = 150.0
+offset_left = 217.0
+offset_top = 77.0
+offset_right = 304.0
+offset_bottom = 146.0
 scale = Vector2(0.7, 0.7)
-

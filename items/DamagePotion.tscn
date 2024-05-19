@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3o5nkokx3eup"]
+[gd_scene load_steps=4 format=3 uid="uid://dphetye6x30i6"]
 
 [ext_resource type="Script" path="res://items/DamagePotion.gd" id="1_taanl"]
-[ext_resource type="Texture2D" uid="uid://dmldkepkoil12" path="res://assets/items/dmg_potion.png" id="2_o2ove"]
+[ext_resource type="Texture2D" path="res://assets/items/dmg_potion.png" id="2_o2ove"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rw0eb"]
 

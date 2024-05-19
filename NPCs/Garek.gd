@@ -1,5 +1,5 @@
 class_name Garek
-extends Area2D
+extends NPC
 
 
 # Called when the node enters the scene tree for the first time.

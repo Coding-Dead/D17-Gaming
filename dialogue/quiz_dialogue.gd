@@ -7,14 +7,14 @@ signal dialogue_finished
 var dialogue = []
 var curr_dialogue_id = 0
 var d_active = false
+var asked_question = false
 
 func _ready():
 	$NinePatchRect.visible = false
 	#start()
-
+	
 func leave():
 	$NinePatchRect.visible = false
-	
 	
 func start():
 	print("started here")
@@ -27,15 +27,26 @@ func start():
 	next_script()
 	
 func load_dialogue():
-	var file = FileAccess.open("res://dialogue/garekDialogue.json", FileAccess.READ)
+	var file = FileAccess.open("res://dialogue/quiz.json", FileAccess.READ)
 	var content = JSON.parse_string(file.get_as_text())
 	return content
 	
 func _input(event):
 	if !d_active:
 		return
-	if event.is_action_pressed("ui_accept"):
+		
+	if asked_question:
+		if event is InputEventKey and event.pressed:
+			$NinePatchRect/BadAnswer.text = ""
+			if event.keycode - 49 == dialogue[curr_dialogue_id]["correct_answer"]:
+				asked_question = false
+				next_script()
+			else:
+				$NinePatchRect/BadAnswer.text = "\nBad answer"
+		
+	elif event.is_action_pressed("ui_accept"):
 		next_script()
+	
 	
 func next_script():
 	curr_dialogue_id += 1
@@ -44,8 +55,19 @@ func next_script():
 		$NinePatchRect.visible = false
 		emit_signal("dialogue_finished")
 		return
-	
+		
 	$NinePatchRect/Name.text = dialogue[curr_dialogue_id]['name']
-	$NinePatchRect/Text.text = dialogue[curr_dialogue_id]['text']
+	
+	if dialogue[curr_dialogue_id].has('question'):
+		asked_question = true
+		var text_to_display = dialogue[curr_dialogue_id]['question']
+		var i = 0
+		for ans in dialogue[curr_dialogue_id]['answers']:
+			text_to_display += "\n"+str(i+1) + ": " +ans
+			i += 1
+		$NinePatchRect/Text.text = text_to_display
+	else:
+		$NinePatchRect/Text.text = dialogue[curr_dialogue_id]['text']
+		
 	$NinePatchRect/PageNumber.text = str(curr_dialogue_id + 1) + " / " + str(len(dialogue))
-
+		
