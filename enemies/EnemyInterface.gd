@@ -60,7 +60,7 @@ func _on_attack_detection_area_body_exited(body):
 func take_damage(_damage : float):
 	curr_health -= _damage
 	if curr_health <= 0:
-		generate_items(position, randi_range(0, 3))
+		generate_items(position, randi_range(1, 3))
 		queue_free()
 
 

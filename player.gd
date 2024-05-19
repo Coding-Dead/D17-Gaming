@@ -10,6 +10,8 @@ extends CharacterBody2D
 
 @onready var debug_label = $DebugLabel
 
+const Item = preload("res://items/Item.gd")
+
 var curr_health: float = 100.0
 var is_dashing = false
 var dash_time_left = 0
@@ -18,6 +20,13 @@ var last_input_direction = Vector2.ZERO
 var projectile_amount = 1
 var spread_angle = 1
 var damage = 10.0
+
+var picked_items  = {
+	Item.ItemType.HEALTH: 0,
+	Item.ItemType.SCORE: 0,
+	Item.ItemType.DAMAGE: 0,
+	Item.ItemType.SPEED: 0
+}
 
 func shoot():
 	for i in range(projectile_amount):
@@ -45,7 +54,6 @@ func update_dash(delta):
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	print(input_direction, typeof(input_direction))
 
 	var dict = {
 		Vector2(1, 0): "walk_right",
@@ -69,7 +77,7 @@ func get_input():
 		Vector2(0, 0):
 			$AnimatedSprite2D2.play("idle")
 		_:
-			print("no animation for that")
+			pass
 
 	
 	
@@ -100,8 +108,7 @@ func take_damage(_damage: float):
 		print("nie zyje")
 
 func _on_area_2d_area_entered(area: Area2D):
-	if is_instance_of(area, Garek):
-		print("Garek")
 	if is_instance_of(area, Item):
-		area.pick_up(self)
+		picked_items[area.type] += 1
+		area.pick_up(self, picked_items[area.type])
 		print("score: ", score, " health: ", curr_health, " dmg: ", damage, " speed: ", speed)
