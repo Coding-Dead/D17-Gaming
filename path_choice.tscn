@@ -51,7 +51,4 @@ theme_override_font_sizes/font_size = 50
 text = "Wybierz swoją ścieżkę"
 horizontal_alignment = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 322)
-
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

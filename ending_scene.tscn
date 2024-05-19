@@ -4,21 +4,32 @@
 script/source = "extends Control
 
 
+@export var label: Node
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var file = FileAccess.open(\"res://global.txt\", FileAccess.READ)
+	var content = file.get_as_text()
+	label.text = str(content)
+	print(content)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#print(node.score)
+		# label.text = str(node.score)
 	pass
+	
+
 
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file(\"res://sandbox_SCZZCZ.tscn\")
 "
 
-[node name="EndingScene" type="Control"]
+[node name="EndingScene" type="Control" node_paths=PackedStringArray("label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,6 +37,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_l55jg")
+label = NodePath("Label3")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -58,7 +70,7 @@ text = "Twoje ECTS'y:"
 layout_mode = 0
 offset_left = 611.0
 offset_top = 224.0
-offset_right = 1053.0
+offset_right = 864.0
 offset_bottom = 318.0
 theme_override_font_sizes/font_size = 50
 text = "00000000"
