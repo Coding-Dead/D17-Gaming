@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://o2a5xy8ossls"]
+[gd_scene load_steps=10 format=3 uid="uid://o2a5xy8ossls"]
 
 [ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_u668d"]
 [ext_resource type="PackedScene" uid="uid://bw7e3fh63p5gt" path="res://enemies/EnemySQL.tscn" id="1_uyavr"]
 [ext_resource type="PackedScene" uid="uid://dn0qkha86nick" path="res://enemies/EnemyJavaScript.tscn" id="2_6lcu4"]
 [ext_resource type="PackedScene" uid="uid://c8n72wvwebu7p" path="res://bullet.tscn" id="2_kdxsj"]
 [ext_resource type="PackedScene" uid="uid://cgkhv1ux7r3o6" path="res://enemies/EnemyIntegral.tscn" id="5_8f076"]
-[ext_resource type="PackedScene" path="res://enemies/EnemySigma.tscn" id="6_qca8h"]
+[ext_resource type="PackedScene" uid="uid://dmskw7xt8a4k5" path="res://enemies/EnemySigma.tscn" id="6_qca8h"]
 [ext_resource type="PackedScene" uid="uid://bu3f6vti78hcw" path="res://enemies/EnemyPi.tscn" id="7_qcrvm"]
 [ext_resource type="PackedScene" uid="uid://c21gv1o4t85ub" path="res://enemies/EnemyC.tscn" id="8_3pgpn"]
+[ext_resource type="PackedScene" uid="uid://dnesyofs3ojqg" path="res://NPCs/Garek.tscn" id="9_d2xxl"]
 
 [node name="Sandbox" type="Node2D"]
 
@@ -33,3 +34,6 @@ position = Vector2(225, 600)
 position = Vector2(831, 458)
 
 [node name="EnemyC" parent="." instance=ExtResource("8_3pgpn")]
+
+[node name="Garek" parent="." instance=ExtResource("9_d2xxl")]
+position = Vector2(215, 72)
