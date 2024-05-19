@@ -13,4 +13,4 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		print("wyjdz na korytarz")
+		body.position= Vector2(20,0)

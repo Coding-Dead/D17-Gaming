@@ -2,7 +2,7 @@ class_name Garek
 extends NPC
 
 func _ready():
-	position = Vector2(100, 0)
+	pass
 
 func _on_body_entered(body):
 	print('Garek Tu')

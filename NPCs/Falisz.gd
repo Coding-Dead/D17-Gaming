@@ -2,7 +2,7 @@ class_name Falisz
 extends NPC
 
 func _ready():
-	position = Vector2(200,100)
+	pass
 
 func _on_body_entered(body):
 	print('Falisz Tu')

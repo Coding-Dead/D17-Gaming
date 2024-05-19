@@ -2,7 +2,7 @@ class_name EnemyPython
 extends "EnemyInterface.gd"
 
 func _init():
-	curr_health = 200.0
+	curr_health = 75.0
 	speed = 30.0
 	attack_cooldown = 400.0
 	damage = 30.0
@@ -17,7 +17,7 @@ func attack_player():
 		for i in range(10):
 			var bullet = Bullet.instantiate() 
 			bullet.damage = damage
-			bullet.speed = 500.0
+			bullet.speed = 200.0
 			bullet.time_to_live = 3.0
 			bullet.switch_target()
 			add_child(bullet)

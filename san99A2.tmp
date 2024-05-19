@@ -1,0 +1,148 @@
+[gd_scene load_steps=23 format=3 uid="uid://bq6r7dvjse28"]
+
+[ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_45soo"]
+[ext_resource type="PackedScene" uid="uid://ddycv6xtarueb" path="res://rooms_2/rooms/room8.tscn" id="1_af4tc"]
+[ext_resource type="PackedScene" uid="uid://bceydgo47fp6" path="res://floors/second_floor.tscn" id="1_fl2dd"]
+[ext_resource type="PackedScene" uid="uid://dn0qkha86nick" path="res://enemies/EnemyJavaScript.tscn" id="2_ybuag"]
+[ext_resource type="PackedScene" uid="uid://o1l3n1akan3u" path="res://floors/ground_flor.tscn" id="3_04aej"]
+[ext_resource type="PackedScene" uid="uid://cg25kq22arbos" path="res://floors/third_floor.tscn" id="5_pgrb7"]
+[ext_resource type="PackedScene" uid="uid://cst5j82bdyntw" path="res://rooms_2/rooms/room4.tscn" id="7_8ae5e"]
+[ext_resource type="PackedScene" uid="uid://cbkjf1umi4hkf" path="res://rooms_2/rooms/room2.tscn" id="7_jdc3t"]
+[ext_resource type="PackedScene" uid="uid://c0eyxqxcuruk3" path="res://enemies/EnemySigma.tscn" id="8_fmqs0"]
+[ext_resource type="PackedScene" uid="uid://biawk8eanseer" path="res://rooms_2/rooms/room1.tscn" id="10_o6xah"]
+[ext_resource type="PackedScene" uid="uid://dqosbc336hm1c" path="res://rooms_2/rooms/room3.tscn" id="11_iqu7b"]
+[ext_resource type="PackedScene" uid="uid://dbrfgus0et1rx" path="res://rooms_2/rooms/room5.tscn" id="12_pgwss"]
+[ext_resource type="PackedScene" uid="uid://b0yx7oekam53u" path="res://rooms_2/rooms/room6.tscn" id="13_p28hk"]
+[ext_resource type="PackedScene" uid="uid://cx6gmcobnp587" path="res://rooms_2/rooms/room7.tscn" id="15_ixpot"]
+[ext_resource type="PackedScene" uid="uid://bpaku7nhvttkx" path="res://ending_scene.tscn" id="15_qfp4n"]
+[ext_resource type="PackedScene" uid="uid://cgkhv1ux7r3o6" path="res://enemies/EnemyIntegral.tscn" id="16_41577"]
+[ext_resource type="PackedScene" uid="uid://bu3f6vti78hcw" path="res://enemies/EnemyPi.tscn" id="17_g8nbk"]
+[ext_resource type="PackedScene" uid="uid://bw7e3fh63p5gt" path="res://enemies/EnemySQL.tscn" id="18_v510n"]
+[ext_resource type="PackedScene" uid="uid://bv8kcqkg2nm01" path="res://enemies/EnemyJava.tscn" id="19_f8ppt"]
+[ext_resource type="PackedScene" uid="uid://bjch7ceq50yfj" path="res://enemies/EnemyAngular.tscn" id="20_1r5cr"]
+[ext_resource type="PackedScene" uid="uid://d24rpi1p2bdus" path="res://enemies/EnemyPython.tscn" id="21_mrqn2"]
+[ext_resource type="PackedScene" uid="uid://c21gv1o4t85ub" path="res://enemies/EnemyC.tscn" id="22_aq6ao"]
+
+[node name="Sandbox_SZCZs" type="Node2D"]
+
+[node name="EnemyPi2" parent="." instance=ExtResource("17_g8nbk")]
+
+[node name="Room1" parent="." instance=ExtResource("1_af4tc")]
+position = Vector2(3128, 2908)
+scale = Vector2(3.5, 3.5)
+
+[node name="Player" parent="." instance=ExtResource("1_45soo")]
+z_index = 1
+position = Vector2(580, 83)
+
+[node name="EnemyJavaScript" parent="." instance=ExtResource("2_ybuag")]
+z_index = 10
+position = Vector2(70, -147)
+
+[node name="SecondFloor" parent="." instance=ExtResource("1_fl2dd")]
+position = Vector2(518, -2578)
+
+[node name="GroundFloor" parent="." instance=ExtResource("3_04aej")]
+position = Vector2(519, 93)
+
+[node name="ThirdFloor" parent="." instance=ExtResource("5_pgrb7")]
+position = Vector2(540, -5236)
+
+[node name="Aula1" parent="." instance=ExtResource("7_jdc3t")]
+position = Vector2(-6137, -765)
+scale = Vector2(2, 2)
+
+[node name="Kible1" parent="." instance=ExtResource("7_8ae5e")]
+position = Vector2(-104, 2632)
+scale = Vector2(3, 3)
+
+[node name="EnemySigma" parent="." instance=ExtResource("8_fmqs0")]
+position = Vector2(-5508, -382)
+
+[node name="sala3" parent="." instance=ExtResource("10_o6xah")]
+position = Vector2(5015, -454)
+scale = Vector2(3, 3)
+
+[node name="Room3" parent="." instance=ExtResource("11_iqu7b")]
+position = Vector2(4816, -3076)
+scale = Vector2(4, 4)
+
+[node name="shanon1" parent="." instance=ExtResource("12_pgwss")]
+position = Vector2(-6400, -6792)
+scale = Vector2(2.13375, 2.43177)
+
+[node name="kapi2" parent="." instance=ExtResource("15_ixpot")]
+position = Vector2(-6072, 1616)
+scale = Vector2(5.755, 5.755)
+
+[node name="aula2" parent="." instance=ExtResource("13_p28hk")]
+position = Vector2(9387, -4343)
+scale = Vector2(4.03, 4.03)
+
+[node name="EndingScene" parent="." instance=ExtResource("15_qfp4n")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="EnemyIntegral" parent="." instance=ExtResource("16_41577")]
+position = Vector2(-101, -73)
+
+[node name="EnemyPi" parent="." instance=ExtResource("17_g8nbk")]
+position = Vector2(75, 0)
+
+[node name="EnemyJavaScript2" parent="." instance=ExtResource("2_ybuag")]
+position = Vector2(-84, 44)
+
+[node name="EnemySQL" parent="." instance=ExtResource("18_v510n")]
+position = Vector2(-336, -413)
+
+[node name="EnemyJava" parent="." instance=ExtResource("19_f8ppt")]
+position = Vector2(-380, -285)
+
+[node name="EnemyPi3" parent="." instance=ExtResource("17_g8nbk")]
+position = Vector2(-228, -285)
+
+[node name="EnemyAngular" parent="." instance=ExtResource("20_1r5cr")]
+position = Vector2(-6012, -6589)
+
+[node name="EnemyIntegral2" parent="." instance=ExtResource("16_41577")]
+position = Vector2(-5875, -6493)
+
+[node name="EnemyIntegral3" parent="." instance=ExtResource("16_41577")]
+position = Vector2(-5559, -6646)
+
+[node name="EnemyPython" parent="." instance=ExtResource("21_mrqn2")]
+position = Vector2(-5684, -6616)
+
+[node name="EnemyJavaScript3" parent="." instance=ExtResource("2_ybuag")]
+position = Vector2(-5729, -6242)
+
+[node name="EnemyJavaScript4" parent="." instance=ExtResource("2_ybuag")]
+position = Vector2(-6206, -6555)
+
+[node name="EnemyJavaScript5" parent="." instance=ExtResource("2_ybuag")]
+position = Vector2(-5804, -6692)
+
+[node name="EnemyC" parent="." instance=ExtResource("22_aq6ao")]
+position = Vector2(-5285, -507)
+
+[node name="EnemyC2" parent="." instance=ExtResource("22_aq6ao")]
+position = Vector2(-5955, -276)
+
+[node name="EnemyAngular2" parent="." instance=ExtResource("20_1r5cr")]
+position = Vector2(-5689, -587)
+
+[node name="EnemyPi4" parent="." instance=ExtResource("17_g8nbk")]
+position = Vector2(-5962, -607)
+
+[node name="EnemyPi5" parent="." instance=ExtResource("17_g8nbk")]
+position = Vector2(-5278, -244)
+
+[node name="EnemySQL2" parent="." instance=ExtResource("18_v510n")]
+position = Vector2(-5422, -664)
+
+[node name="EnemySQL3" parent="." instance=ExtResource("18_v510n")]
+position = Vector2(-5648, -185)

@@ -1,4 +1,5 @@
-[gd_scene load_steps=15 format=3 uid="uid://o2a5xy8ossls"]
+
+[gd_scene load_steps=12 format=3 uid="uid://o2a5xy8ossls"]
 
 [ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_u668d"]
 [ext_resource type="PackedScene" uid="uid://bw7e3fh63p5gt" path="res://enemies/EnemySQL.tscn" id="1_uyavr"]
@@ -36,8 +37,6 @@ position = Vector2(225, 600)
 position = Vector2(831, 458)
 
 [node name="EnemyC" parent="." instance=ExtResource("8_3pgpn")]
-
-[node name="Garek" parent="." instance=ExtResource("9_d2xxl")]
 position = Vector2(215, 72)
 
 [node name="Falisz" parent="." instance=ExtResource("9_30dhs")]
@@ -51,3 +50,4 @@ position = Vector2(215, 72)
 [node name="Zygmunt" parent="." instance=ExtResource("14_y16f7")]
 
 [node name="Wacek" parent="." instance=ExtResource("13_5j5h5")]
+

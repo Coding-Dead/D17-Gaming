@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cst5j82bdyntw"]
+[gd_scene load_steps=13 format=3 uid="uid://cst5j82bdyntw"]
 
 [ext_resource type="Texture2D" uid="uid://6op8lsgxelyd" path="res://rooms_2/rooms/16x16/Room_Builder_free_16x16.png" id="1_t6htf"]
 [ext_resource type="Texture2D" uid="uid://dxp3vvkfbokc4" path="res://rooms_2/rooms/16x16/Interiors_free_16x16.png" id="2_gjdoc"]
+[ext_resource type="Script" path="res://rooms_2/rooms/doorswc.gd" id="3_snmx3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wl0q3"]
 texture = ExtResource("1_t6htf")
@@ -1408,9 +1409,10 @@ tile_set = SubResource("TileSet_ywi6n")
 format = 2
 layer_0/tile_data = PackedInt32Array(589825, 0, 536870939, 655361, 0, 536870938, 589826, 65536, 536870939, 655362, 65536, 536870938, 589827, 131072, 536870939, 655363, 131072, 536870938, 589828, 196608, 536870939, 655364, 196608, 536870938, 720901, 589824, 536870940, 655365, 589824, 536870941, 720904, 589824, 536870940, 655368, 589824, 536870941, 720907, 589824, 536870940, 655371, 589824, 536870941, 720910, 589824, 536870940, 655374, 589824, 536870941, 589829, 524288, 33, 589832, 524288, 33, 589835, 524288, 33, 4, 589824, 62, 65540, 589824, 63, 7, 589824, 62, 65543, 589824, 63, 10, 589824, 62, 65546, 589824, 63, 13, 589824, 62, 65549, 589824, 63, 16, 589824, 62, 65552, 589824, 63, 1, 917504, 536870969, 65536, 917504, 1342177337, 196608, 917504, 1342177337, 327680, 917504, 1342177337, 458752, 917504, 1342177337, 589838, 524288, 33)
 
-[node name="Area2D2" type="Area2D" parent="."]
+[node name="doorswc" type="Area2D" parent="."]
+script = ExtResource("3_snmx3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" groups=["door"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doorswc" groups=["door"]]
 position = Vector2(48.5, 156.5)
 shape = SubResource("RectangleShape2D_om0h4")
 
@@ -1431,3 +1433,5 @@ shape = SubResource("RectangleShape2D_bsbfs")
 [node name="bottom_wall" type="CollisionShape2D" parent="StaticBody2D" groups=["wall"]]
 position = Vector2(156.25, 172.25)
 shape = SubResource("RectangleShape2D_86sm0")
+
+[connection signal="body_entered" from="doorswc" to="doorswc" method="_on_body_entered"]

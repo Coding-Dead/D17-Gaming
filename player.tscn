@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://crqrei8gtj8kq"]
+[gd_scene load_steps=24 format=3 uid="uid://crqrei8gtj8kq"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_i8xsc"]
 [ext_resource type="PackedScene" uid="uid://c8n72wvwebu7p" path="res://bullet.tscn" id="2_y1gaq"]
-[ext_resource type="Texture2D" uid="uid://7wshudj4nvpc" path="res://assets/characters/Wacek.png" id="3_802q0"]
 [ext_resource type="Texture2D" uid="uid://bwe2j43kkwamt" path="res://assets/chibi-layered.png" id="4_iy7nu"]
+[ext_resource type="Script" path="res://HealthBar.gd" id="5_a0f06"]
+[ext_resource type="Texture2D" uid="uid://b27mpw3eewkb8" path="res://assets/health_bar2.png" id="5_ixl45"]
+[ext_resource type="Texture2D" uid="uid://balx5cniasqv" path="res://assets/health_bar_background.png" id="5_phah6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4tt4"]
 radius = 6.0
@@ -143,15 +145,14 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_stfw4"]
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_i8xsc")
 Bullet = ExtResource("2_y1gaq")
 
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(3, -4)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_802q0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_l4tt4")
@@ -166,11 +167,31 @@ offset_bottom = 23.0
 shape = SubResource("CircleShape2D_bpovh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-scale = Vector2(3, 3)
+position = Vector2(0, -1)
+scale = Vector2(1.5625, 1.6875)
 sprite_frames = SubResource("SpriteFrames_uvnga")
 animation = &"idle"
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+light_mask = 524801
+visibility_layer = 524801
+z_index = 1000
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_stfw4")
+offset_left = -566.0
+offset_top = -286.0
+offset_right = -438.0
+offset_bottom = -254.0
+scale = Vector2(1.5, 1.5)
+value = 100.0
+texture_under = ExtResource("5_phah6")
+texture_progress = ExtResource("5_ixl45")
+tint_under = Color(0, 0, 0, 1)
+tint_over = Color(0, 0, 0, 1)
+script = ExtResource("5_a0f06")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
