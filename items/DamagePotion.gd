@@ -1,7 +1,7 @@
 class_name DamagePotion
 extends Item
 
-@export var damage : int = 6
+@export var damage : int = 5
 
 func _init():
 	item_name = "Damage Potion"
