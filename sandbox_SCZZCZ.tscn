@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bq6r7dvjse28"]
+[gd_scene load_steps=16 format=3 uid="uid://bq6r7dvjse28"]
 
 [ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_45soo"]
 [ext_resource type="PackedScene" uid="uid://ddycv6xtarueb" path="res://rooms_2/rooms/room8.tscn" id="1_af4tc"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dbrfgus0et1rx" path="res://rooms_2/rooms/room5.tscn" id="12_pgwss"]
 [ext_resource type="PackedScene" uid="uid://b0yx7oekam53u" path="res://rooms_2/rooms/room6.tscn" id="13_p28hk"]
 [ext_resource type="PackedScene" uid="uid://cx6gmcobnp587" path="res://rooms_2/rooms/room7.tscn" id="15_ixpot"]
+[ext_resource type="PackedScene" uid="uid://bpaku7nhvttkx" path="res://ending_scene.tscn" id="15_qfp4n"]
 
 [node name="Sandbox_SZCZs" type="Node2D"]
 
@@ -68,3 +69,11 @@ scale = Vector2(5.755, 5.755)
 [node name="aula2" parent="." instance=ExtResource("13_p28hk")]
 position = Vector2(9387, -4343)
 scale = Vector2(4.03, 4.03)
+
+[node name="EndingScene" parent="." instance=ExtResource("15_qfp4n")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
