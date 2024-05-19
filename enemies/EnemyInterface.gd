@@ -58,10 +58,10 @@ func _on_attack_detection_area_body_exited(body):
 func take_damage(_damage : float):
 	curr_health -= _damage
 	if curr_health <= 0:
-		generate(position, 3)
+		generate_items(position, randi_range(0, 3))
 		queue_free()
 		
-func generate(position: Vector2, no_items: int):
+func generate_items(position: Vector2, no_items: int):
 	var delta : float = 50.0
 	for i in range(no_items):
 		var delta_x : float = float(randi_range(-delta, delta))

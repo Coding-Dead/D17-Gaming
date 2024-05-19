@@ -10,5 +10,5 @@ func _init():
 
 func pick_up(_player : Player) -> void:
 	print("heal item picked up")
-	_player.health += hp
+	_player.curr_health += hp
 	queue_free()
