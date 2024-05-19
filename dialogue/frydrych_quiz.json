@@ -1,6 +1,10 @@
 [
 	{"name": "Dr. Wacław Frydrych", "text": "Witam! Prowadzę przedmiot Analiza Matematyczna hyhy"},
-	{"name": "Dr. Wacław Frydrych", "text": "Zobaczymy sobie co tam pamiętasz po maturce"},
+	{"name": "Dr. Wacław Frydrych", "text": "Ten przedmiot jest rozbity na dwa semestry: Analiza Matematyczna I i II"},
+	{"name": "Dr. Wacław Frydrych", "text": "W trakcie tego przedmiotu pogłębimy naszą wiedzę w zakresie funkcji"},
+	{"name": "Dr. Wacław Frydrych", "text": "Nauczysz się różniczkować i całkować jednowymiarowe funkcje"},
+	{"name": "Dr. Wacław Frydrych", "text": "Na drugim semie przyjrzymy się funkcjom wielowymiarowym"},
+	{"name": "Dr. Wacław Frydrych", "text": "Zobaczymy teraz sobie co tam pamiętasz po maturce"},
 	{"name": "Dr. Wacław Frydrych", "question": "Pochodna ujemna to funckja pierwotna...", "answers": ["Rośnie", "Maleje", "Jest stała", "Nie da się określić"], "correct_answer": 1},
 	{"name": "Dr. Wacław Frydrych", "question": "Ciąg 3n+5 jest...",  "answers": ["Geometryczny", "Arytmetyczny", "Ani taki ani taki"], "correct_answer": 1},
 	{"name": "Dr. Wacław Frydrych", "question": "Rozwiąż równanie log(x-2) = 0", "answers": ["1", "2", "3", "4"], "correct_answer": 2},

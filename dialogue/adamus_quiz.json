@@ -1,5 +1,7 @@
 [
 	{"name": "Dr. Lech Adamus", "text": "Cześć, jestem ćwiczeniowcem z Algebry, możliwe że zobaczymy się na pierwszym semestrze."},
+	{"name": "Dr. Lech Adamus", "text": "Prowadzę algebrę, jest do przedmiot, na którym dowiesz się o strukturach algebraicznych."},
+	{"name": "Dr. Lech Adamus", "text": "Takich jak grupy, pierścienie i ciała, oraz o operacjach wykonywanych na nich."},
 	{"name": "Dr. Lech Adamus", "text": "Oto pytanka ode mnie:"},
 	{"name": "Dr. Lech Adamus", "question": "Jak nazywa się liczba przed zmienną?", "answers": ["Współczynnik", "Stała", "Zmienna", "Wykładnik"], "correct_answer": 0},
 	{"name": "Dr. Lech Adamus", "question": "Ile wynosi i (jednostka urojona) do kwadratu?", "answers": ["1", "i", "-i", "-1"], "correct_answer": 3},
