@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxf11n5wncy78"]
+
+[ext_resource type="Script" path="res://NPCs/Zygmunt.gd" id="1_epkk5"]
+[ext_resource type="Texture2D" uid="uid://cf1pkit2yr0wv" path="res://assets/characters/Zygmunt.png" id="2_8mji5"]
+[ext_resource type="PackedScene" uid="uid://dr4xh7g0ik0yx" path="res://dialogue/dialogue.tscn" id="3_gg3dm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_msutd"]
+radius = 23.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6hyu2"]
+
+[node name="Zygmunt" type="Area2D"]
+script = ExtResource("1_epkk5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_8mji5")
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_msutd")
+
+[node name="ZygmuntDialogue" parent="chat_detection_area" instance=ExtResource("3_gg3dm")]
+offset_left = -84.0
+offset_top = -143.0
+offset_right = -44.0
+offset_bottom = -103.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_6hyu2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="chat_detection_area/ZygmuntDialogue" to="." method="_on_dialogue_dialogue_finished"]

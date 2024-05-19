@@ -4,7 +4,7 @@ extends "EnemyInterface.gd"
 func _init():
 	curr_health = 100.0
 	speed = 20.0
-	attack_cooldown = 300.0
+	attack_cooldown = 200.0
 	damage = 30.0
 	is_ranged = true
 	charging_movement = true
@@ -12,7 +12,7 @@ func _init():
 
 func attack_player():
 	if curr_attack_cooldown == 0:
-		var spread_angle = 30
+		var spread_angle = 20
 		
 		for i in range(3):
 			var bullet = Bullet.instantiate() 

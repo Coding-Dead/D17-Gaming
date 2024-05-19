@@ -7,7 +7,7 @@ signal health_change
 @export var dash_duration = 0.2
 @export var dash_cooldown = 0.5
 @export var Bullet : PackedScene 
-@export var max_health : float = 100.0
+@export var max_health : float = 500.0
 @export var score : int = 0
 
 @onready var debug_label = $DebugLabel
@@ -22,7 +22,9 @@ var dash_cooldown_left = 0
 var last_input_direction = Vector2.ZERO
 var projectile_amount = 1
 var spread_angle = 1
-var damage = 10.0
+var damage = 15.0
+var curr_attack_cooldown = 0
+var attack_cooldown = 20.0
 
 var picked_items  = {
 	Item.ItemType.HEALTH: 0,
@@ -32,17 +34,21 @@ var picked_items  = {
 }
 
 func shoot():
-	for i in range(projectile_amount):
-		var bullet = Bullet.instantiate()
-		bullet.damage = damage  
-		add_child(bullet)
-		var angle_offset = spread_angle * (i - (projectile_amount - 1) / 2.0)
-		var direction = position.direction_to(get_global_mouse_position()).rotated(deg_to_rad(angle_offset))
-		bullet.set_target(direction)
-		
-		var x = get_global_mouse_position() - position
-		bullet.rotate(x.angle())
-
+	if curr_attack_cooldown == 0:
+		for i in range(projectile_amount):
+			var bullet = Bullet.instantiate()
+			bullet.damage = damage  
+			add_child(bullet)
+			var angle_offset = spread_angle * (i - (projectile_amount - 1) / 2.0)
+			var direction = position.direction_to(get_global_mouse_position()).rotated(deg_to_rad(angle_offset))
+			bullet.set_target(direction)
+			
+			var x = get_global_mouse_position() - position
+			bullet.rotate(x.angle())
+			
+		curr_attack_cooldown = attack_cooldown
+	else:
+		curr_attack_cooldown -= 1
 
 func start_dash():
 	if last_input_direction != Vector2.ZERO:
@@ -60,7 +66,6 @@ func update_dash(delta):
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	print(input_direction, typeof(input_direction))
 
 	var dict = {
 		Vector2(1, 0): "walk_right",
@@ -86,12 +91,11 @@ func get_input():
 		_:
 			pass
 
-
 	if not is_dashing:
 		velocity = input_direction * speed
 		if input_direction != Vector2.ZERO:
 			last_input_direction = input_direction
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_pressed("shoot"):
 		shoot()
 	if Input.is_action_just_pressed("dash") and dash_cooldown_left <= 0:
 		start_dash()
@@ -107,10 +111,16 @@ func _physics_process(delta):
 	move_and_slide()
 
 
+func update_health():
+	health_change.emit()
+
+
 func take_damage(_damage: float):
 	curr_health -= _damage
-	health_change.emit()
+	update_health()
 	if curr_health < 0:
+		var file = FileAccess.open("res://global.txt", FileAccess.WRITE)
+		file.store_string(str(score))
 		get_tree().change_scene_to_file("res://ending_scene.tscn")
 		print("nie zyje")
 

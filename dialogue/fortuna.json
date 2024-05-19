@@ -1,0 +1,5 @@
+[
+{"name": "Mgr. Artur Fortuna", "text": "Dzień dobry, jestem ćwiczeniowcem z Matematyki Dyskretnej, możliwe że zobaczymy się na pierwszym semestrze."},
+{"name": "Mgr. Artur Fortuna", "text": "Matematyka Dyskretna zajmuje się badaniem struktur dyskretnych, które nie zmieniają się w sposób ciągły. Teraz zadam Ci kilka pytań związanych z moim przedmiotem:"},
+{"name": "Mgr. Artur Fortuna", "question": "Co to jest graf (wizualnie)?", "answers": ["Kropki", "Strzałki", "Kreski", "Kropki i kreski"], "correct_answer": 0},
+]
