@@ -1,5 +1,8 @@
 [
 	{"name": "Dr. Anna Zygmunt", "text": "Dzień dobry, prowadzę przedmiot Bazy Danych na drugim semestrze, jestem również w zarządzie naszego wydziału."},
+	{"name": "Dr. Anna Zygmunt", "text": "Na moim przedmiocie poznasz podstawy relacyjnych baz danych."},
+	{"name": "Dr. Anna Zygmunt", "text": "Nauczysz się pisać podstawowe zapytania w języku SQL czy projektować schemat bazy."},
+	{"name": "Dr. Anna Zygmunt", "text": "Na koniec przedmiotu czeka Cię również grupowy projeky:)"},
 	{"name": "Dr. Anna Zygmunt", "text": "Oto pytanka ode mnie:"},
 	{"name": "Dr. Anna Zygmunt", "question": "Jak nazywa się język zapytań używany w bazach danych?", "answers": ["SQL", "HTML", "CSS", "Python"], "correct_answer": 0},
 	{"name": "Dr. Anna Zygmunt", "question": "Które z poniższych jest poleceniem SQL do wybierania danych z bazy danych?", "answers": ["INSERT", "UPDATE", "DELETE", "SELECT"], "correct_answer": 3},
@@ -8,6 +11,4 @@
 	{"name": "Dr. Anna Zygmunt", "question": "Jak nazywają się skrzydła naszego budynku?", "answers": ["Tesla, Edison", "Shanon, Turing", "Einstein, Gauss", "Euler, Newton"], "correct_answer": 1},
 	{"name": "Dr. Anna Zygmunt", "question": "Ile mamy wind?", "answers": ["1", "2", "3", "4"], "correct_answer": 1},
 	{"name": "Dr. Anna Zygmunt", "text": "Narazie to wszystko, zapraszam na trzecim semie na bazy danych:)"},
-	
-	
 ]
