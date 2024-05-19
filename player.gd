@@ -33,6 +33,9 @@ var picked_items  = {
 	Item.ItemType.SPEED: 0
 }
 
+func _ready():
+	debug_label.set("theme_override_colors/font_color", Color(0, 0, 0))
+
 func shoot():
 	if curr_attack_cooldown == 0:
 		for i in range(projectile_amount):
@@ -102,7 +105,7 @@ func get_input():
 
 
 func _physics_process(delta):
-	debug_label.text = "Health: %d\nScore: %d" % [curr_health, score]
+	debug_label.text = "Health: %d\nScore: %d\n Speed: %d\n Damage: %d\n" % [curr_health, score, speed, damage]
 	get_input()
 	if is_dashing:
 		update_dash(delta)
