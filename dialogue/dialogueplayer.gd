@@ -11,6 +11,10 @@ var d_active = false
 func _ready():
 	$NinePatchRect.visible = false
 	#start()
+
+func leave():
+	$NinePatchRect.visible = false
+	
 	
 func start():
 	print("started here")
@@ -43,3 +47,4 @@ func next_script():
 	
 	$NinePatchRect/Name.text = dialogue[curr_dialogue_id]['name']
 	$NinePatchRect/Text.text = dialogue[curr_dialogue_id]['text']
+	$NinePatchRect/PageNumber.text = str(curr_dialogue_id + 1) + " / " + str(len(dialogue))

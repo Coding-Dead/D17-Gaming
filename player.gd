@@ -96,7 +96,8 @@ func _physics_process(delta):
 func take_damage(_damage: float):
 	curr_health -= _damage
 	if curr_health < 0:
-		print("nie zyje")
+		#print("nie zyje")
+		return
 
 func _on_area_2d_area_entered(area: Area2D):
 	if is_instance_of(area, Garek):

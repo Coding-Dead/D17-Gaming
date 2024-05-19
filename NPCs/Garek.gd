@@ -17,14 +17,17 @@ func _on_body_entered(body):
 
 
 func _on_chat_detection_area_body_exited(body):
-	print("ENTERING CHAT")
-	$chat_detection_area/Dialogue.start()
+	print("LEAVING CHAT")
+	$chat_detection_area/Dialogue.leave()
 	#if body.has_method("Player"):
 		#print("In chat")
 
 
 func _on_chat_detection_area_body_entered(body):
-	print("LEAVING CHAT")
+	print("ENTERING CHAT")
+	
+	$chat_detection_area/Dialogue.start()
+	
 
 
 func _on_dialogue_dialogue_finished():
