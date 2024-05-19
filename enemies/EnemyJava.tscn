@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://et11omle284y" path="res://assets/enemies/java.png" id="2_i2yq7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e1yf"]
-radius = 306.026
+radius = 561.001
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nrpq"]
 radius = 271.0

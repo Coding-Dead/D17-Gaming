@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://be3qi6kp61pw4" path="res://assets/enemies/sql.png" id="2_aqwv0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e1yf"]
-radius = 235.009
+radius = 565.15
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nrpq"]
 radius = 212.021
