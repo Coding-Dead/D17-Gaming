@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=16 format=3 uid="uid://bq6r7dvjse28"]
 
 [ext_resource type="PackedScene" uid="uid://crqrei8gtj8kq" path="res://player.tscn" id="1_45soo"]
@@ -9,12 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://cst5j82bdyntw" path="res://rooms_2/rooms/room4.tscn" id="7_8ae5e"]
 [ext_resource type="PackedScene" uid="uid://cbkjf1umi4hkf" path="res://rooms_2/rooms/room2.tscn" id="7_jdc3t"]
 [ext_resource type="PackedScene" uid="uid://c0eyxqxcuruk3" path="res://enemies/EnemySigma.tscn" id="8_fmqs0"]
+
 [ext_resource type="PackedScene" uid="uid://biawk8eanseer" path="res://rooms_2/rooms/room1.tscn" id="10_o6xah"]
 [ext_resource type="PackedScene" uid="uid://dqosbc336hm1c" path="res://rooms_2/rooms/room3.tscn" id="11_iqu7b"]
 [ext_resource type="PackedScene" uid="uid://dbrfgus0et1rx" path="res://rooms_2/rooms/room5.tscn" id="12_pgwss"]
 [ext_resource type="PackedScene" uid="uid://b0yx7oekam53u" path="res://rooms_2/rooms/room6.tscn" id="13_p28hk"]
 [ext_resource type="PackedScene" uid="uid://cx6gmcobnp587" path="res://rooms_2/rooms/room7.tscn" id="15_ixpot"]
 [ext_resource type="PackedScene" uid="uid://bpaku7nhvttkx" path="res://ending_scene.tscn" id="15_qfp4n"]
+
 
 [node name="Sandbox_SZCZs" type="Node2D"]
 

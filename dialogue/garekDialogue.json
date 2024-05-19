@@ -1,0 +1,9 @@
+[
+	{"name": "Dziekan", "text": "Witaj! Jak mogę Ci dzisiaj pomóc?"},
+	{"name": "Student", "text": "Dzień dobry! Chciałbym porozmawiać o moim planie zajęć na ten semestr."},
+	{"name": "Dziekan", "text": "Oczywiście, jakie masz pytania?"},
+	{"name": "Student", "text": "Czy mogę zmienić kilka kursów? Znalazłem inne, które bardziej odpowiadają moim zainteresowaniom."},
+	{"name": "Dziekan", "text": "Tak, możesz zmienić kursy, ale musisz upewnić się, że nowe kursy nie kolidują z innymi zajęciami w twoim planie."},
+	{"name": "Student", "text": "Dziękuję! Sprawdzę to i wrócę, jeśli będę miał jakieś pytania."},
+	{"name": "Dziekan", "text": "Nie ma sprawy, jestem tutaj, aby pomóc. Życzę powodzenia z twoimi studiami!"}
+]
