@@ -38,11 +38,29 @@ text = "Weź dziekankę"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 146.0
-offset_top = 97.0
-offset_right = 1014.0
-offset_bottom = 288.0
+offset_left = 139.0
+offset_top = 86.0
+offset_right = 1007.0
+offset_bottom = 277.0
 theme_override_font_sizes/font_size = 50
 text = "Zostałeś skreślony z listy studentów"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 223.0
+offset_right = 833.0
+offset_bottom = 304.0
+theme_override_font_sizes/font_size = 50
+text = "Twoje ECTS'y:"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 224.0
+offset_right = 1053.0
+offset_bottom = 318.0
+theme_override_font_sizes/font_size = 50
+text = "00000000"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
