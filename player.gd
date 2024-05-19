@@ -45,7 +45,6 @@ func update_dash(delta):
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	print(input_direction, typeof(input_direction))
 
 	var dict = {
 		Vector2(1, 0): "walk_right",
@@ -85,6 +84,7 @@ func get_input():
 	if Input.is_action_just_pressed("dash") and dash_cooldown_left <= 0:
 		start_dash()
 
+
 func _physics_process(delta):
 	debug_label.text = "Health: %d\nScore: %d" % [curr_health, score]
 	get_input()
@@ -94,14 +94,14 @@ func _physics_process(delta):
 		dash_cooldown_left -= delta
 	move_and_slide()
 
+
 func take_damage(_damage: float):
 	curr_health -= _damage
 	if curr_health < 0:
 		print("nie zyje")
 
+
 func _on_area_2d_area_entered(area: Area2D):
-	if is_instance_of(area, Garek):
-		print("Garek")
 	if is_instance_of(area, Item):
 		area.pick_up(self)
 		print("score:", self.score, " hp:", self.health)

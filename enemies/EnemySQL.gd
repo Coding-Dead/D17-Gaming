@@ -1,12 +1,14 @@
 class_name EnemySQL
 extends "EnemyInterface.gd"
 
+
 func _init():
 	curr_health = 100.0
 	speed = 100.0
 	attack_cooldown = 50.0
 	damage = 10.0
 	is_ranged = true
+	charging_movement = true
 
 
 func attack_player():
