@@ -1,7 +1,11 @@
 [
 	{"name": "Prof. Piotr Faliszewski", "text": "Witaj przyszły studencie!  "},
 	{"name": "Prof. Piotr Faliszewski", "text": "Od teraz będę się do Ciebie zwracał Harold. "},
-	{"name": "Prof. Piotr Faliszewski", "text": "A więc Haroldzie, zadam Ci kilka pytań. Odpowiesz dobrze - dostaniesz nagrodę, aczkolwiek zła odpowiedzieć - oj nie chciałbym być na Twoim miejscu."},
+	{"name": "Prof. Piotr Faliszewski", "text": "A więc Haroldzie, za chwilę zadam Ci kilka pytań, ale najpierw kilka słów o moim przedmiocie."},
+	{"name": "Prof. Piotr Faliszewski", "text": "Prowadzę Algorytmy i Struktury Danych - ASD"},
+	{"name": "Prof. Piotr Faliszewski", "text": "Przedmiot ten polega na implementacji wydajnych algorytmów, przy użyciu skomplikowanych stuktur danych"},
+	{"name": "Prof. Piotr Faliszewski", "text": "Spotkamy się na drugim semestrze:)"},
+	{"name": "Prof. Piotr Faliszewski", "text": "A teraz kilka pytanek:"},
 	{"name": "Prof. Piotr Faliszewski", "question": "Jaka złożoność czasowa algorytmu jest Twoim zdaniem najwydajniejsza?", "answers": ["Liniowa", "Kwadratowa", "Wykładnicza", "Logarytmiczna"], "correct_answer": 3},
 	{"name": "Prof. Piotr Faliszewski", "question": "Jak zapisać 15 binarnie?",  "answers": ["1110", "1010", "1111", "1000"], "correct_answer": 2},
 	{"name": "Prof. Piotr Faliszewski", "question": "Zgadnij, wolę koty czy psy?", "answers": ["Koty", "Psy"], "correct_answer": 0},
