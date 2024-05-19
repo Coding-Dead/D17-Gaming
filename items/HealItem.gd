@@ -4,9 +4,8 @@ extends Item
 @export var hp : int = 100
 
 func _init():
-	item_name = "Health"
+	item_name = "Heal Potion"
 	type = ItemType.HEALTH
-	sprite = load("res://assets/enemies/java.png")
 
 func pick_up(_player : Player) -> void:
 	print("heal item picked up")

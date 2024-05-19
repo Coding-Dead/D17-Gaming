@@ -105,6 +105,4 @@ func take_damage(_damage: float):
 func _on_area_2d_area_entered(area: Area2D):
 	if is_instance_of(area, Item):
 		area.pick_up(self)
-		print("score:", self.score, " hp:", self.health)
-
-	
+		print("score: ", score, " health: ", curr_health, " dmg: ", damage, " speed: ", speed)
