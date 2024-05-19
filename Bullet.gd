@@ -30,5 +30,4 @@ func _on_body_entered(body):
 	if body.is_in_group(targeted_group):
 		body.take_damage(damage)
 	if not body.is_in_group(friendly_group):
-		#print(friendly_group)
 		queue_free()

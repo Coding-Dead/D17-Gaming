@@ -65,7 +65,8 @@ func take_damage(_damage : float):
 	if curr_health <= 0:
 		generate_items(position, randi_range(1, 3))
 		queue_free()
-		
+
+
 func generate_items(position: Vector2, no_items: int):
 	var delta : float = 50.0
 	for i in range(no_items):
