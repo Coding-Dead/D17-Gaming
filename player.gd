@@ -1,14 +1,17 @@
 extends CharacterBody2D
 
+signal health_change
+
 @export var speed = 400
 @export var dash_speed = 800
 @export var dash_duration = 0.2
 @export var dash_cooldown = 0.5
 @export var Bullet : PackedScene 
-@export var health : int = 1000
+@export var max_health : float = 100.0
 @export var score : int = 0
 
 @onready var debug_label = $DebugLabel
+@onready var health_bar = $HealthBar
 
 const Item = preload("res://items/Item.gd")
 
@@ -39,7 +42,8 @@ func shoot():
 		
 		var x = get_global_mouse_position() - position
 		bullet.rotate(x.angle())
-	
+
+
 func start_dash():
 	if last_input_direction != Vector2.ZERO:
 		is_dashing = true
@@ -47,10 +51,12 @@ func start_dash():
 		dash_cooldown_left = dash_cooldown
 		velocity = last_input_direction.normalized() * dash_speed
 
+
 func update_dash(delta):
 	dash_time_left -= delta
 	if dash_time_left <= 0:
 		is_dashing = false
+
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -79,11 +85,7 @@ func get_input():
 		_:
 			pass
 
-	
-	
-	
-	
-	
+
 	if not is_dashing:
 		velocity = input_direction * speed
 		if input_direction != Vector2.ZERO:
@@ -106,6 +108,7 @@ func _physics_process(delta):
 
 func take_damage(_damage: float):
 	curr_health -= _damage
+	health_change.emit()
 	if curr_health < 0:
 		print("nie zyje")
 
