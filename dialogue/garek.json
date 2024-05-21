@@ -1,9 +1,10 @@
 [
-	{"name": "Dziekan", "question": "Witaj! Jak mogę Ci dzisiaj pomóc?", "answers": ["Tak", "Nie"], "correct_answer": 0},
-	{"name": "Student", "text": "Dzień dobry! Chciałbym porozmawiać o moim planie zajęć na ten semestr."},
-	{"name": "Dziekan", "text": "Oczywiście, jakie masz pytania?"},
-	{"name": "Student", "text": "Czy mogę zmienić kilka kursów? Znalazłem inne, które bardziej odpowiadają moim zainteresowaniom."},
-	{"name": "Dziekan", "text": "Tak, możesz zmienić kursy, ale musisz upewnić się, że nowe kursy nie kolidują z innymi zajęciami w twoim planie."},
-	{"name": "Student", "text": "Dziękuję! Sprawdzę to i wrócę, jeśli będę miał jakieś pytania."},
-	{"name": "Dziekan", "text": "Nie ma sprawy, jestem tutaj, aby pomóc. Życzę powodzenia z twoimi studiami!"}
+	{"name": "Dziekan Gajęcki", "text": "Witaj, w naszej grze!"},
+	{"name": "Dziekan Gajęcki", "text": "Nazywam się Marek Gajęcki, i jestem tutaj ProDziekanem."},
+	{"name": "Dziekan Gajęcki", "text": "Aby przejść grę musisz znaleźć mnie w pokoju na drugim piętrze naszego budynku."},
+	{"name": "Dziekan Gajęcki", "text": "Po drodze spotkasz mnóstwo przeciwników, spotkasz się z nimi również na studiach."},
+	{"name": "Dziekan Gajęcki", "text": "W salach naszego budynku sptokasz również paru wykładowców / prowadzących."},
+	{"name": "Dziekan Gajęcki", "text": "Dowiesz się od nich informacji o niektórych przedmiotach, które mamy na naszym kierunku."},
+	{"name": "Dziekan Gajęcki", "text": "Przygotuj się na kilka pytań od każdego z nich."}
+	{"name": "Dziekan Gajęcki", "text": "Powodzenia!"}
 ]

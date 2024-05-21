@@ -24,3 +24,6 @@ Podczas podróży przez budynek, będziemy spotykać prowadzących zajęcia, kt�
 - ![Zygmunt](./assets/characters/Zygmunt.png) - dr Zygmunt
 
 Na czwartym piętrze czeka nas walka z bossem. Tożsamość tego bossa na chwilę obecną pozostaje nieznana, ale możemy się spodziewać, że będzie to najtrudniejszy przeciwnik w grze, wymagający zarówno umiejętności, jak i strategii. Inspiracją dla tej walki jest gra "Binding of Isaac", która charakteryzuje się dynamicznymi i wymagającymi starciami z bossami.
+
+### Jak zagrać?
+Gra jest dostępna do pobrania na https://miljunak.itch.io/d17-game
