@@ -27,3 +27,8 @@ Na czwartym piętrze czeka nas walka z bossem. Tożsamość tego bossa na chwil�
 
 ### Jak zagrać?
 Gra jest dostępna do pobrania na https://miljunak.itch.io/d17-game
+
+### Makiety UI
+
+![mock1](./mock1.jpg)
+![mock2](./mock2.jpg)
